@@ -228,8 +228,9 @@ img.potongan-jeruk {
 
 .content .kolom-kiri h1.halo {
     font-size: 84px;
+    line-height: 1em;
     color: #fbc739;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     letter-spacing: -2px;
 }
 
@@ -341,6 +342,74 @@ i {
 }
 
 
+/* DAFTAR HARGA
+ ***************
+ */
+.harga {
+    margin-top: 100px;
+    padding: 40px 0 !important;
+}
+
+.harga .kolom-kiri h1.halo {
+    font-size: 84px;
+    line-height: 1em;
+    color: #fbc739;
+    margin-bottom: 10px;
+    letter-spacing: -2px;
+}
+
+.harga .spark-satu {
+    position: absolute;
+    top: 10px;
+    left: -35px;
+}
+
+.daftar-harga > .content {
+    padding: 0;
+}
+
+.paket-harga {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: -1em;
+}
+
+.paket-harga h3 {
+    text-align: center;
+    color: #000;
+    margin: 0;
+}
+
+.paket-harga h4 {
+    text-align: center;
+    color: #000;
+    margin: 0
+}
+
+.rupiah {
+    font-size: 14px;
+    color: #313131;
+}
+
+.paket {
+    flex-basis: 32%;
+    margin-left: 1em;
+    padding: 40px 20px;
+    width: 100%;
+}
+.keterangan {
+     font-size: 10px;
+    margin-top: 0;
+    padding-top: 0;
+}
+.keterangan p {
+    line-height: 14px;
+}
+
+
+
 /* FOOTER
  ***************
  */
@@ -350,6 +419,10 @@ i {
     width: 100%;
     background-image: linear-gradient(90deg, rgb(252, 255, 0) 0%, rgb(252, 255, 0) 25%, rgba(255, 255, 255, 0) 40%);
     margin-top: 80px;
+}
+
+.kontak {
+    margin-top: 140px !important;
 }
 
 .footer {
@@ -622,21 +695,16 @@ a.send_form:hover {
     .navbar .menu-list li a {
         display: block;
         text-decoration: none;
-        color: #fff;
+        color: #000;
         padding: 16px 0.8em;
         -moz-transition: all 0.2s ease;
         -o-transition: all 0.2s ease;
         -webkit-transition: all 0.2s ease;
         transition: all 0.2s ease;
-        border-bottom: 1px solid #db8b8b;
-    }
-
-    .navbar .menu-list li a:hover {
-        background-color: #df9797;
     }
 
     .navbar .menu-list li a.active {
-        background-color: #d98383;
+        border-bottom: 0
     }
 
     .expand {
@@ -675,7 +743,7 @@ a.send_form:hover {
     }
 
     img.potongan-jeruk {
-        max-width: 700px;
+        max-width: 800px;
         overflow: hidden;
     }
 
@@ -701,8 +769,8 @@ a.send_form:hover {
     }
 
     .spark-satu {
-        left: 6px;
-        top: 12px
+        left: -34px;
+        top: 6px
     }
 
     .content .kolom-kiri h1 {
@@ -727,8 +795,42 @@ a.send_form:hover {
         top: -20px
     }
 
+    .harga .spark-satu {
+        top: 0;
+    }
+
     .owl-carousel {
         padding: 0 20px;
+    }
+
+    .harga {
+        margin-top: 0;
+        padding: 40px 0 0 !important;
+    }
+    
+    .daftar-harga {
+        padding-top: 0;
+    }
+    
+    .daftar-harga .content {
+        padding: 0;
+    }
+    
+    .paket-harga {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    .paket-harga .grey {
+        margin-top: 10px;
+    }
+    
+    
+    .keterangan {
+         font-size: 10px;
+        margin-top: 0;
+        padding: 10px 0 !important;
     }
 
     #footerwrap {
@@ -750,6 +852,10 @@ a.send_form:hover {
 
     .footer .kolom-kiri h1 {
         font-size: 22px;
+    }
+
+    .copyright {
+        text-align: center;
     }
 
     .strawberry {
