@@ -1,0 +1,770 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    line-height: 1.25;
+    color: #6f6f6f;
+    overflow-x: hidden;
+    background: #f4f4f4;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+strong {
+    color: #000;
+}
+
+/* HEADER
+ ***************
+ */
+#headerwrap {
+    color: #000;
+    position: fixed;
+    background: none;
+    min-height: 55px;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: .3s ease;
+}
+
+.header {
+    width: 1160px;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 2.05em 0;
+    overflow: visible;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+.glass {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: .3s all linear;
+    box-shadow: -1px -9px 41px 0px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: -1px -9px 41px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: -1px -9px 41px 0px rgba(0, 0, 0, 0.25);
+}
+
+.site-name {
+    width: 50%;
+}
+
+.site-name img.logo {
+    width: auto;
+    height: 63px;
+    transition: .3s all linear;
+}
+
+.site-name img.logo.resize {
+    width: auto;
+    height: 32px;
+    transition: .3s all linear;
+}
+
+.menu {
+    width: 50%;
+    text-align: right;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    display: inline-block;
+    margin-left: 2em;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #5d5d5d;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: ease .5s;
+}
+
+.menu ul li a:hover {
+    color: #000;
+    transition: ease .5s;
+}
+
+.menu ul li a.active {
+    color: #000;
+    border-bottom: 4px solid #000;
+}
+
+#menu-icon {
+    display: none;
+}
+
+
+
+
+/* HERO
+ ***************
+ */
+#herowrap {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: linear-gradient(90deg, rgb(252, 255, 0) 0%, rgb(252, 255, 0) 53%, rgba(255, 255, 255, 0) 65%);
+}
+
+.hero {
+    width: 1160px;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 80px
+}
+
+.hero .kolom-kiri {
+    width: 900px;
+    padding-right: 70px;
+    padding-left: 70px;
+    padding-bottom: 100px;
+    padding-top: 200px;
+    background-image: linear-gradient(90deg, rgb(251, 255, 0) 0%, rgb(255, 204, 0) 100%);
+    background-color: transparent;
+    border-bottom-right-radius: 120px;
+    -webkit-box-shadow: 48px 101px 96px -74px rgba(110, 88, 0, 0.48);
+    -moz-box-shadow: 48px 101px 96px -74px rgba(110, 88, 0, 0.48);
+    box-shadow: 48px 101px 96px -74px rgba(110, 88, 0, 0.48);
+}
+
+.hero h1 {
+    font-size: 76px;
+    letter-spacing: -3px;
+    font-weight: 800;
+    color: #000;
+    margin: 0;
+    line-height: 1.15;
+}
+
+.hero h2 {
+    font-size: 80px;
+    font-style: italic;
+    letter-spacing: -2px;
+    font-weight: 400;
+    color: #000;
+    margin: 0;
+    line-height: 1.15;
+}
+
+img.potongan-jeruk {
+    max-width: 1600px;
+    position: absolute;
+    top: 0;
+    left: -170px;
+    pointer-events: none;
+}
+
+.hero .kontak-button a {
+    display: inline-flex;
+    font-size: 14px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 24px 38px;
+    border-radius: 60px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    box-shadow: 1px 10px 23px 0px rgba(0, 0, 0, 0.38);
+    -webkit-box-shadow: 1px 10px 23px 0px rgba(0, 0, 0, 0.38);
+    -moz-box-shadow: 1px 10px 23px 0px rgba(0, 0, 0, 0.38);
+    transition: ease .5s;
+}
+
+.kontak-button a:hover {
+    box-shadow: 1px 10px 23px 0px rgba(0, 0, 0, 0.58);
+    -webkit-box-shadow: 1px 10px 23px 0px rgba(0, 0, 0, 0.58);
+    -moz-box-shadow: 1px 10px 23px 0px rgba(0, 0, 0, 0.58);
+    transition: ease .5s;
+}
+
+
+/* CONTENT
+ ***************
+ */
+.contentwrap {
+    position: relative;
+    width: 100%;
+}
+
+.content {
+    width: 1160px;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    padding: 80px 0;
+}
+
+.content .kolom-kiri {
+    width: 70%;
+}
+
+.content .kolom-kiri h1.halo {
+    font-size: 84px;
+    color: #fbc739;
+    margin-bottom: 0;
+    letter-spacing: -2px;
+}
+
+.spark-satu {
+    position: absolute;
+    top: 60px;
+    left: -35px;
+}
+
+.content .kolom-kiri h1.halo span.titik {
+    color: #000;
+}
+
+.content .kolom-kiri h1 {
+    color: #000;
+    font-size: 33px;
+    letter-spacing: -1px;
+    margin: 0
+}
+
+.content .kolom-kanan {
+    width: 30%;
+}
+
+.content .kolom-kanan img.nanas {
+    position: absolute;
+    top: -240px;
+    right: -100px;
+    width: 470px;
+    pointer-events: none;
+}
+
+.content p {
+    line-height: 23px;
+}
+
+.content .kontak-button a {
+    display: inline-flex;
+    font-size: 14px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 24px 38px;
+    border-radius: 60px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    box-shadow: 1px 10px 23px 0px rgba(0, 0, 0, 0.38);
+    -webkit-box-shadow: 1px 10px 23px 0px rgba(0, 0, 0, 0.38);
+    -moz-box-shadow: 1px 10px 23px 0px rgba(0, 0, 0, 0.38);
+    transition: ease .5s;
+}
+
+.kontak-button a:hover {
+    box-shadow: 1px 10px 23px 0px rgba(0, 0, 0, 0.58);
+    -webkit-box-shadow: 1px 10px 23px 0px rgba(0, 0, 0, 0.58);
+    -moz-box-shadow: 1px 10px 23px 0px rgba(0, 0, 0, 0.58);
+    transition: ease .5s;
+}
+
+.grey {
+    background: #fdfdfd;
+    border-radius: 30px;
+}
+
+h1.portfolio-title {
+    position: absolute;
+    top: -110px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    font-size: 84px;
+    color: #fbc739;
+    margin-bottom: 0;
+    letter-spacing: -2px;
+}
+
+.spark-dua {
+    position: absolute;
+    top: -5px;
+    left: -35px;
+}
+
+h1.portfolio-title span.titik {
+    color: #000;
+}
+
+.owl-carousel {
+    padding: 0;
+}
+
+h3.has-text-align-left {
+    color: #222;
+}
+
+i {
+    margin-left: 10px;
+    margin-top: 1px
+}
+
+.item a {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #000;
+    text-decoration: none;
+    border-bottom: 2px solid #000;
+    margin-bottom: 4px;
+}
+
+
+/* FOOTER
+ ***************
+ */
+#footerwrap {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: linear-gradient(90deg, rgb(252, 255, 0) 0%, rgb(252, 255, 0) 25%, rgba(255, 255, 255, 0) 40%);
+    margin-top: 80px;
+}
+
+.footer {
+    width: 1160px;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 0;
+    display: flex;
+}
+
+.footer .kolom-kiri {
+    width: 55%;
+    padding: 80px;
+    background: url('../images/irisan-jeruk.png') no-repeat, linear-gradient(90deg, rgb(251, 255, 0) 0%, rgb(255, 204, 0) 100%);
+    background-position: right bottom -240px;
+    border-top-right-radius: 120px;
+    display: inline-block;
+    -webkit-box-shadow: 48px -44px 96px -74px rgba(110, 88, 0, 0.48);
+    -moz-box-shadow: 48px -44px 96px -74px rgba(110, 88, 0, 0.48);
+    box-shadow: 48px -44px 96px -74px rgba(110, 88, 0, 0.48);
+}
+
+.footer .kolom-kiri h1 {
+    color: #000;
+    font-size: 33px;
+    letter-spacing: -1px;
+    margin: 0
+}
+
+ul.sosmed-list {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0 0;
+}
+
+ul.sosmed-list li {
+    display: inline-block;
+    margin: 0 .2rem 0 0;
+}
+
+ul.sosmed-list li a {
+    padding: 10px 14px 10px 5px;
+    background: #fff;
+    border-radius: 8px;
+    color: #555;
+}
+
+.strawberry {
+    position: absolute;
+    top: -238px;
+    left: 300px;
+    pointer-events: none;
+}
+
+.copyright {
+    margin-top: 60px;
+}
+
+.copyright a {
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+}
+
+
+.footer .kolom-kanan {
+    width: 45%;
+    padding: 0 0 80px 80px;
+}
+
+
+/* Input Field CSS */
+.datainput {
+    position: relative;
+    margin: 5px 0 10px
+}
+
+.datainput p {
+    font-size: 12px;
+    background: #f4f4f4;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: .5rem
+}
+
+.whatsapp-form textarea {
+    min-height: 80px;
+}
+
+.datainput select {
+    padding: 10px 0 12px;
+    color: #6f6f6f;
+    font-size: 16px;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    outline: none;
+    background: #f4f4f4;
+    text-indent: 3px;
+}
+
+.datainput input,
+.datainput textarea {
+    font-size: 15px;
+    padding: 12px 0;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    text-indent: 6px;
+    background: #f4f4f4;
+}
+
+.datainput input:focus,
+.datainput textarea:focus {
+    outline: none
+}
+
+.datainput label {
+    color: #999;
+    font-size: 14px;
+    font-weight: 400;
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    top: 18px;
+    transition: .2s ease all
+}
+
+.datainput input:focus ~ label,
+.datainput input:valid ~ label,
+.datainput textarea:focus ~ label,
+.datainput textarea:valid ~ label {
+    top: -10px;
+    font-size: 14px;
+    color: #21a51f
+}
+
+#notif-license span {
+    font-size: 40px
+}
+
+#notif-license {
+    display: none;
+    position: fixed
+}
+
+.highlight {
+    position: absolute;
+    height: 50%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: .5
+}
+
+.datainput input:focus ~ .highlight,
+.datainput textarea:focus ~ .highlight {
+    animation: inputHighlighter .3s ease
+}
+
+.datainput input:focus ~ label,
+.datainput input:valid ~ label,
+.datainput textarea:focus ~ label,
+.datainput textarea:valid ~ label {
+    top: -10px;
+    font-size: 14px;
+    color: #21a51f
+}
+
+a.send_form {
+    display: inline-flex;
+    font-size: 14px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 24px 38px;
+    border-radius: 60px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    box-shadow: 1px 10px 23px 0px rgba(0, 0, 0, 0.38);
+    -webkit-box-shadow: 1px 10px 23px 0px rgba(0, 0, 0, 0.38);
+    -moz-box-shadow: 1px 10px 23px 0px rgba(0, 0, 0, 0.38);
+    transition: ease .5s;
+}
+
+a.send_form:hover {
+    box-shadow: 1px 10px 23px 0px rgba(0, 0, 0, 0.58);
+    -webkit-box-shadow: 1px 10px 23px 0px rgba(0, 0, 0, 0.58);
+    -moz-box-shadow: 1px 10px 23px 0px rgba(0, 0, 0, 0.58);
+    transition: ease .5s;
+}
+
+/* 
+ * MEDIA QUERIES 
+ */
+@media only screen and (max-width: 767px) {
+    * {
+        box-sizing: border-box
+    }
+
+    body,
+    html {
+        overflow-x: hidden;
+    }
+
+    #headerwrap {
+        padding: 0 20px;
+        position: sticky;
+    }
+
+    .header {
+        width: 100%;
+        padding: 1em 0;
+    }
+
+    .site-name img.logo {
+        height: 30px;
+    }
+
+    .menu ul li a {
+        width: 100%;
+    }
+
+    #menu-icon {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 0;
+        color: #000;
+        text-decoration: none;
+        font-weight: bold;
+        cursor: pointer;
+        opacity: 1;
+        padding: 0 0.4em;
+    }
+
+    #menu-icon:hover {
+        opacity: 0.85;
+        text-decoration: none;
+        border: none;
+    }
+
+    .navbar {
+        float: none;
+        margin-top: 30px;
+        max-height: 0;
+        overflow: hidden;
+        -moz-transition: max-height 0.4s;
+        -o-transition: max-height 0.4s;
+        -webkit-transition: max-height 0.4s;
+        transition: max-height 0.4s;
+    }
+
+    .navbar .menu-list {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    .navbar .menu-list li {
+        list-style-type: none;
+        display: block;
+    }
+
+    .navbar .menu-list li a {
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        padding: 16px 0.8em;
+        -moz-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        border-bottom: 1px solid #db8b8b;
+    }
+
+    .navbar .menu-list li a:hover {
+        background-color: #df9797;
+    }
+
+    .navbar .menu-list li a.active {
+        background-color: #d98383;
+    }
+
+    .expand {
+        max-height: 20em;
+    }
+
+    #herowrap {
+        padding: 0 20px;
+        position: relative;
+    }
+
+    .hero {
+        width: 100%;
+        padding: 0;
+    }
+
+    .hero .kolom-kiri {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+        padding-bottom: 50px;
+        padding-top: 100px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero h2 {
+        font-size: 40px;
+    }
+
+    .hero .kontak-button a {
+        padding: 12px 24px;
+        margin-top: 20px;
+    }
+
+    img.potongan-jeruk {
+        max-width: 700px;
+        overflow: hidden;
+    }
+
+    .contentwrap {
+        padding: 0 20px;
+    }
+
+    .contentwrap .content {
+        width: 100%;
+        padding: 40px 0;
+    }
+
+    .content .kolom-kiri {
+        width: 100%;
+    }
+
+    .content .kolom-kanan {
+        display: none;
+    }
+
+    .content .kolom-kiri h1.halo {
+        font-size: 38px;
+    }
+
+    .spark-satu {
+        left: 6px;
+        top: 12px
+    }
+
+    .content .kolom-kiri h1 {
+        font-size: 22px
+    }
+
+    .content .kontak-button a {
+        padding: 12px 24px;
+        margin-top: 20px;
+    }
+
+    h1.portfolio-title {
+        font-size: 38px;
+        top: -50px;
+    }
+
+    .grey {
+        margin-top: 40px;
+    }
+
+    .spark-dua {
+        top: -20px
+    }
+
+    .owl-carousel {
+        padding: 0 20px;
+    }
+
+    #footerwrap {
+        background-image: inherit;
+        padding: 0;
+    }
+
+    .footer {
+        width: 100%;
+        padding: 0;
+        display: block;
+    }
+
+    .footer .kolom-kiri {
+        width: 100%;
+        padding: 100px 20px 40px;
+        background-position: right bottom -400px;
+    }
+
+    .footer .kolom-kiri h1 {
+        font-size: 22px;
+    }
+
+    .strawberry {
+        left: 130px;
+        width: 300px;
+        top: -168px
+    }
+
+    .footer .kolom-kanan {
+        width: 100%;
+        padding: 40px 20px;
+    }
+
+    a.send_form {
+        padding: 12px 24px;
+        margin-top: 20px;
+    }
+}
