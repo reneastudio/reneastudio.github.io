@@ -25,7 +25,7 @@ var input_blanter = document.getElementById('wa_email');
 
 /* Whatsapp Settings */
 var walink = 'https://web.whatsapp.com/send',
-    phone = '6283122270221',
+    phone = '6285963954968',
     walink2 = 'Halo Renea Studio, ',
     text_yes = 'Terkirim.',
     text_no = 'Isi semua formulir lalu klik Kirim.';
