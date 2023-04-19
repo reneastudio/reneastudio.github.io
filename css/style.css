@@ -164,6 +164,9 @@ img {
 
 
 /* TAGS MOBILE */
+.tags {
+    padding-top: 80px;
+}
 .tags .button-outline {
     border: 1px solid #8d949e;
     color: #8d949e;
@@ -203,9 +206,30 @@ img {
 /* DESCRIPTION MOBILE */
 .description {
     text-align: center;
-    padding: 80px 0;
+    padding: 80px 0 10px;
 }
 
+.pdf {
+    text-align: center;
+}
+
+.pdf .button.konsultasi {
+    background-color: #171A21;
+    border: 9px solid #ceedd6;
+    color: #daf6f6;
+    font-size: 16px;
+    border-radius: 48px;
+    letter-spacing: 1px;
+    padding: 2rem 5.2rem;
+    height: inherit;
+    margin: 10px 0 0 0;
+    transition: .2s ease-in;
+}
+
+.pdf .button.konsultasi:hover {
+    border: 9px solid #171A21;
+    transition: .2s ease-in;
+}
 
 
 /* KEUNGGULAN */
