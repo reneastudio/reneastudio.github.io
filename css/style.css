@@ -436,7 +436,7 @@ img {
     padding: 40px 30px 40px !important;
     transition: all 0.6s ease-in-out;
     border-radius: 12px;
-    min-height: 254px;
+    min-height: 306px;
 }
 
 .blog-single {
@@ -473,7 +473,7 @@ span.hashtags {
     background: #ededed;
     margin-right: 4px;
     padding: 4px 8px;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     letter-spacing: -1px
 }
