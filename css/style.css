@@ -436,6 +436,7 @@ img {
     padding: 40px 30px 40px !important;
     transition: all 0.6s ease-in-out;
     border-radius: 12px;
+    min-height: 254px;
 }
 
 .blog-single {
