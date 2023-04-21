@@ -447,6 +447,10 @@ img {
     margin-top: 40px;
 }
 
+.feat-image img {
+    border-radius: 12px;
+}
+
 .blog:hover {
     background: #3a404e;
     transition: all 0.6s ease-in-out;
