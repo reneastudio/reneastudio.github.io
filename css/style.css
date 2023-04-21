@@ -436,7 +436,6 @@ img {
     padding: 40px 30px 40px !important;
     transition: all 0.6s ease-in-out;
     border-radius: 12px;
-    min-height: 306px;
 }
 
 .blog-single {
@@ -495,7 +494,10 @@ span.hashtags {
     transition: all 0.6s ease-in-out;
 }
 
-.a2a_svg, .a2a_count { border-radius: 0 !important; }
+.a2a_svg,
+.a2a_count {
+    border-radius: 0 !important;
+}
 
 /* TESTIMONIALS */
 .testimonials h1,
@@ -792,10 +794,14 @@ footer i.whatsapp {
     .testimonial-container {
         padding-top: 40px !important;
     }
-    
+
     /* BLOG */
     .blog-single {
         margin-top: 200px;
+    }
+
+    .blog {
+        margin-bottom: 30px
     }
 }
 
@@ -968,5 +974,10 @@ footer i.whatsapp {
     /* CTA */
     .cta h1 {
         font-size: 62px;
+    }
+
+    /* BLOG */
+    .blog {
+        min-height: 306px;
     }
 }
