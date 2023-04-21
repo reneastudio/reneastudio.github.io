@@ -167,6 +167,7 @@ img {
 .tags {
     padding-top: 80px;
 }
+
 .tags .button-outline {
     border: 1px solid #8d949e;
     color: #8d949e;
@@ -407,7 +408,7 @@ img {
     background: rgba(255, 255, 255, 0.27);
     border: 1px solid #171A21;
     border-radius: 18px;
-  transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
     transform: rotateY(0deg);
 }
 
@@ -417,9 +418,76 @@ img {
     color: #fff;
     border: 1px solid #171A21;
     border-radius: 18px;
-    
-  transition: all 0.6s ease-in-out;
-  transform: rotateY(180deg);
+
+    transition: all 0.6s ease-in-out;
+    transform: rotateY(180deg);
+}
+
+
+/* BLOG */
+.blog-container {
+    padding-top: 40px;
+    margin-bottom: 80px;
+}
+
+.blog {
+    background: #f8f8f8;
+    color: #171A21;
+    padding: 40px 30px 40px !important;
+    transition: all 0.6s ease-in-out;
+    border-radius: 12px;
+}
+
+.blog-single {
+    margin-top: 200px;
+}
+
+.blog-single-content,
+.feat-image {
+    margin-top: 40px;
+}
+
+.blog:hover {
+    background: #3a404e;
+    transition: all 0.6s ease-in-out;
+}
+
+.blog h4 a {
+    color: #171A21;
+    transition: all 0.6s ease-in-out;
+}
+
+.blog:hover h4 a {
+    color: #ccced4;
+    transition: all 0.6s ease-in-out;
+    text-decoration: underline;
+}
+
+span.hashtags {
+    border-radius: 6px;
+    background: #ededed;
+    margin-right: 4px;
+    padding: 4px 8px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -1px
+}
+
+.post-date {
+    font-size: 12px;
+    color: #939393;
+    text-transform: uppercase;
+    margin-bottom: 20px
+}
+
+.blog a,
+.blog-single a {
+    transition: all 0.6s ease-in-out;
+}
+
+.blog a:hover,
+.blog-single a:hover {
+    transition: all 0.6s ease-in-out;
 }
 
 
@@ -592,6 +660,7 @@ footer i.whatsapp {
 /* MOBILE COLUMN PERCENTAGE EDIT, ETC */
 @media (max-width: 39.9rem) {
 
+    .row .column.column-20,
     .row .column.column-50,
     .row .column.column-80 {
         flex: 0 0 100%;
@@ -694,7 +763,7 @@ footer i.whatsapp {
     }
 
     .header .menu-btn:checked ~ .menu {
-        max-height: 240px;
+        max-height: 340px;
     }
 
     .header .menu-btn:checked ~ .menu-icon .navicon {
@@ -717,6 +786,11 @@ footer i.whatsapp {
     /* TESTIMONIAL */
     .testimonial-container {
         padding-top: 40px !important;
+    }
+    
+    /* BLOG */
+    .blog-single {
+        margin-top: 200px;
     }
 }
 
