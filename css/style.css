@@ -495,7 +495,7 @@ span.hashtags {
     transition: all 0.6s ease-in-out;
 }
 
-
+.a2a_svg, .a2a_count { border-radius: 0 !important; }
 
 /* TESTIMONIALS */
 .testimonials h1,
