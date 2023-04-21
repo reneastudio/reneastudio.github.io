@@ -9,18 +9,28 @@
 
 <url>
   <loc>https://reneastudio.com/</loc>
-  <lastmod>2023-04-19T10:10:33+00:00</lastmod>
+  <lastmod>2023-04-21T03:15:31+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://reneastudio.com/portfolio.html</loc>
-  <lastmod>2023-04-19T10:10:33+00:00</lastmod>
+  <lastmod>2023-04-21T03:15:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://reneastudio.com/blog.html</loc>
+  <lastmod>2023-04-21T03:15:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://reneastudio.com/kontak.html</loc>
-  <lastmod>2023-04-19T10:10:33+00:00</lastmod>
+  <lastmod>2023-04-21T03:15:31+00:00</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://reneastudio.com/blog/pentingnya-bisnis-memiliki-website-dan-manfaatnya-untuk-bisnis.html</loc>
+  <lastmod>2023-04-21T03:15:31+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 
