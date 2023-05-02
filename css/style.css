@@ -550,6 +550,11 @@ h2.sub-heading {
     .testimonial-container {
         padding-top: 40px !important;
     }
+    
+    /* DESCRIPTION */
+    .description {
+        margin-top: -360px;
+    }
 }
 
 
