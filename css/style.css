@@ -232,7 +232,6 @@ h2.sub-heading {
     background-image: url(../images/3.jpg);
     background-size: cover;
     background-position: top center;
-    border-radius: 12px;
 }
 
 .heroImgDua {
@@ -241,7 +240,6 @@ h2.sub-heading {
     background-image: url(../images/4.jpg);
     background-size: cover;
     background-position: top center;
-    border-radius: 12px;
 }
 
 .heroImgTiga {
@@ -250,7 +248,6 @@ h2.sub-heading {
     background-image: url(../images/6.jpg);
     background-size: cover;
     background-position: top center;
-    border-radius: 12px;
 }
 
 .portfolio {
