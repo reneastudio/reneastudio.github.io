@@ -150,8 +150,30 @@ h2.sub-heading {
 }
 
 .tags .button-outline {
-    border: 1px solid #8d949e;
+    border: 0;
     color: #2c160b;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 24px;
+    letter-spacing: -1px;
+}
+
+.tags .button-outline:nth-child(odd) {
+    color: #f0f0f0;
+    text-shadow: -1px 1px 0 #2c160b,
+				  1px 1px 0 #2c160b,
+				 1px -1px 0 #2c160b,
+				-1px -1px 0 #2c160b;
+    letter-spacing: 1px;
+}
+
+.tags .button-outline:nth-child(odd):hover {
+    color: #f0f0f0;
+    text-shadow: -1px 1px 0 #606c76,
+				  1px 1px 0 #606c76,
+				 1px -1px 0 #606c76,
+				-1px -1px 0 #606c76;
+    letter-spacing: 1px;
 }
 
 .button-large {
