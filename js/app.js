@@ -97,13 +97,6 @@ $(document).ready(function () {
     });
 
 
-    // SMOOTH SCROLL
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-    let smoother = ScrollSmoother.create({
-        smooth: 2,
-    });
-
-
     // ANCHOR LINK
     // Detect if a link's href goes to the current page
     function getSamePageAnchor(link) {
