@@ -315,6 +315,10 @@ input:-webkit-autofill:active {
     align-items: center;
 }
 
+.copyright {
+    margin-top: 20px;
+}
+
 
 /* BACK TO TOP BUTTON */
 #backtop {
@@ -510,6 +514,7 @@ input:-webkit-autofill:active {
     }
     
     .copyright {
-        text-align: right
+        text-align: right;
+        margin-top: 0;
     }
 }
