@@ -123,16 +123,10 @@ a:hover {
     content: '\e802';
 }
 
-/* DIAGONAL LINES */
-.diagonal-lines {
-    position: relative;
-}
-
+/* LINES */
 .lines {
     position: relative;
     margin-top: 20px;
-    left: -100px;
-    opacity: 0;
 }
 
 
@@ -171,7 +165,6 @@ a:hover {
 }
 
 .hero-text h1 {
-    color: transparent;
     font-size: 74px;
 }
 
@@ -198,12 +191,6 @@ a:hover {
 .animate-dua,
 .animate-tiga {
     position: relative;
-    bottom: -100px;
-    opacity: 0;
-}
-
-#thumbnails {
-    display: none
 }
 
 .services h6 {
@@ -267,19 +254,6 @@ a:hover {
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
-}
-
-.nama-klien img.swipeimage {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    z-index: -1;
-    opacity: 0;
-    visibily: hidden;
-    pointer-events: none;
 }
 
 
@@ -499,8 +473,7 @@ input:-webkit-autofill:active {
         width: 880px;
         height: 810px;
         left: 58%;
-        bottom: -100px;
-        opacity: 0;
+        bottom: 0;
     }
 
     .button-large {
