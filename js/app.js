@@ -39,6 +39,18 @@ $(document).ready(function () {
             document.getElementById("text-info").innerHTML = '<span class="no">' + text_no + '</span>';
         }
     });
+    
+    /* LENIS SMOOTH SCROLL */
+    const lenis = new Lenis()
+    lenis.on('scroll', (e) => {
+        console.log(e)
+    })
+
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
 
     // GSAP
     // MOUSE CURSOR
@@ -77,5 +89,16 @@ $(document).ready(function () {
     }
     $(window).on('mousemove', moveCircle);
     $("a").hover(hoverFunc, unhoverFunc);
+    
+    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
 
 });
