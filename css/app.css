@@ -497,6 +497,10 @@ input:-webkit-autofill:active {
         display: inline-block;
     }
     
+    .contact-container {
+        padding-top: 20px;
+    }
+    
     .contact-desc {
         margin-top: 60px
     }
