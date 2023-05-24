@@ -39,7 +39,7 @@ $(document).ready(function () {
             document.getElementById("text-info").innerHTML = '<span class="no">' + text_no + '</span>';
         }
     });
-    
+
     /* LENIS SMOOTH SCROLL */
     const lenis = new Lenis()
     lenis.on('scroll', (e) => {
@@ -89,16 +89,13 @@ $(document).ready(function () {
     }
     $(window).on('mousemove', moveCircle);
     $("a").hover(hoverFunc, unhoverFunc);
-    
-    
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
         });
     });
-});
 
 });
