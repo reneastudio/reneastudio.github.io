@@ -173,16 +173,6 @@ a:hover {
     margin: 0;
 }
 
-.split-parent {
-    overflow: hidden;
-    color: #e9ecef;
-}
-
-.split-child {
-    display: inline-block;
-    color: #e9ecef;
-}
-
 .split-me .line-wrapper {
     overflow: hidden;
 }
