@@ -88,6 +88,8 @@ $(document).ready(function () {
         });
     }
     $(window).on('mousemove', moveCircle);
+    
+    // SMOOTH ANCHOR
     $("a").hover(hoverFunc, unhoverFunc);
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
