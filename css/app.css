@@ -344,7 +344,7 @@ input:-webkit-autofill:active {
 
 
 /* FOOTER */
-.footer {
+footer {
     padding-top: 80px;
     padding-bottom: 80px;
     background: #08010f;
