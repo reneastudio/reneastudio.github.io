@@ -22,6 +22,7 @@ $(document).ready(function () {
                 input_email1 = $("#wa_email").val(),
                 input_number1 = $("#wa_number").val(),
                 input_url1 = $("#wa_url").val(),
+                input_budget1 = $("#budget").val(),
                 input_textarea1 = $("#wa_textarea").val();
 
             /* Final Whatsapp URL */
@@ -30,6 +31,7 @@ $(document).ready(function () {
                 '*Email* : ' + input_email1 + '%0A' +
                 '*HP/WA* : ' + input_number1 + '%0A' +
                 '*Website* : ' + input_url1 + '%0A' +
+                '*Budget* : ' + input_budget1 + '%0A' +
                 '*Pesan* : ' + input_textarea1 + '%0A';
 
             /* Whatsapp Window Open */
@@ -40,7 +42,7 @@ $(document).ready(function () {
         }
     });
 
-    /* LENIS SMOOTH SCROLL */
+    // LENIS SMOOTH SCROLL
     const lenis = new Lenis()
     lenis.on('scroll', (e) => {
         console.log(e)
@@ -88,6 +90,8 @@ $(document).ready(function () {
         });
     }
     $(window).on('mousemove', moveCircle);
+    
+    // ANCHOR LINK
     $("a").hover(hoverFunc, unhoverFunc);
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {

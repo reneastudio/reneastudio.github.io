@@ -209,9 +209,10 @@ a:hover {
     width: 100%;
     text-align: left;
     cursor: none;
+    margin-top: 20px;
 }
 
-.icon-right {
+.button .icon-right {
     float: right;
 }
 
@@ -267,9 +268,15 @@ a:hover {
     padding: 80px 0;
 }
 
+.iklan-produk-container {
+    background: #efe2ce;
+    padding: 80px 0;
+}
+
 .case-study h2,
 .case-study h6,
-.case-study p {
+.case-study p,
+.case-study a {
     color: #020916;
 }
 
@@ -290,6 +297,11 @@ a:hover {
 
 .screenshot {
     margin-top: 20px;
+}
+
+video {
+  width: 100%    !important;
+  height: auto   !important;
 }
 
 
@@ -383,6 +395,7 @@ footer {
 
     .row .column.column-20,
     .row .column.column-25,
+    .row .column.column-33,
     .row .column.column-40,
     .row .column.column-50,
     .row .column.column-60,
@@ -583,5 +596,17 @@ footer {
     
     .screenshot {
         margin-top: 80px;
+    }
+    
+    .videos {
+        margin-top: -140px;
+    }
+    
+    .burger {
+        margin-top: 200px;
+    }
+    
+    .korean {
+        margin-top: 400px
     }
 }
