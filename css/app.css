@@ -44,7 +44,7 @@ a:hover {
 
 .circle {
     position: fixed;
-    background-color: #fff;
+    background-color: #006cff;
     width: 10px;
     height: 10px;
     left: -10px;
@@ -57,11 +57,11 @@ a:hover {
 
 .circle-follow {
     position: fixed;
-    border: 1px solid #fff;
+    border: 1px solid #006cff;
     width: 30px;
     height: 30px;
-    left: -21px;
-    top: -21px;
+    left: -20px;
+    top: -20px;
     border-radius: 100%;
     z-index: 1;
     user-select: none;
@@ -139,10 +139,11 @@ a:hover {
 
 .site-logo {
     display: inline-block;
+    width: 80px;
 }
 
 .navbar {
-    margin: 10px 0 0 30px;
+    margin: 20px 0 0 30px;
     display: inline-block;
 }
 
@@ -165,7 +166,7 @@ a:hover {
 }
 
 .hero-text h1 {
-    font-size: 74px;
+    font-size: 60px;
 }
 
 .hero-text h1 > div {
@@ -175,6 +176,11 @@ a:hover {
 
 .split-me .line-wrapper {
     overflow: hidden;
+}
+
+.animate-satu {
+    font-size: 20px;
+    margin-bottom: 40px;
 }
 
 .animate-satu,
@@ -189,7 +195,7 @@ a:hover {
 }
 
 .services p {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .button-large {
@@ -218,6 +224,7 @@ a:hover {
 .lines {
     display: none;
 }
+
 .works {
     padding: 80px 0;
 }
@@ -248,6 +255,41 @@ a:hover {
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
+}
+
+.bibleng-container {
+    background: #FFF4F5;
+    padding: 80px 0;
+}
+
+.kancil-container {
+    background: #ebebeb;
+    padding: 80px 0;
+}
+
+.case-study h2,
+.case-study h6,
+.case-study p {
+    color: #020916;
+}
+
+.case-study h6 {
+    letter-spacing: 3px;
+    margin-left: 4px
+}
+
+.case-study h2 {
+    margin-top: 30px;
+    font-size: 60px;
+    margin-bottom: 40px;
+}
+
+.case-study p.desc {
+    font-size: 20px
+}
+
+.screenshot {
+    margin-top: 20px;
 }
 
 
@@ -307,10 +349,12 @@ input:-webkit-autofill:active {
     padding-bottom: 80px;
     border-top: 1px dashed #4C657D;
 }
+
 .footer .logo-renea-studio {
     top: 10px;
     position: relative
 }
+
 .footer > .row {
     align-items: center;
 }
@@ -338,14 +382,16 @@ input:-webkit-autofill:active {
 @media (max-width: 39.9rem) {
 
     .row .column.column-20,
+    .row .column.column-25,
     .row .column.column-40,
+    .row .column.column-50,
     .row .column.column-60,
     .row .column.column-80 {
         flex: 0 0 100%;
         max-width: 100%;
     }
 
-    .row .column.column-offset-20 {
+    .row .column.column-offset-20, .row .column.column-offset-25 {
         margin-left: 0;
     }
 
@@ -361,6 +407,7 @@ input:-webkit-autofill:active {
     .header-bar .navbar {
         position: absolute;
         right: 0;
+        top: 0;
         width: 100%;
     }
 
@@ -374,6 +421,8 @@ input:-webkit-autofill:active {
         list-style: none;
         overflow: hidden;
         background: #020916;
+        position: relative;
+        top: -20px;
     }
 
     .header-bar li a {
@@ -468,8 +517,8 @@ input:-webkit-autofill:active {
     #thumbnails {
         display: inherit;
         position: absolute;
-        width: 880px;
-        height: 810px;
+        width: 931px;
+        height: 890px;
         left: 58%;
         bottom: 0;
     }
@@ -494,27 +543,45 @@ input:-webkit-autofill:active {
 
     .navbar ul li {
         display: inline-block;
+    }    
+
+    .site-logo {
+        width: 123px;
+        height: auto;
     }
-    
+
+    .hero-text h1 {
+        font-size: 76px;
+        letter-spacing: -3px;
+    }
+
     .arrow-satu {
         float: right;
         margin-right: 60px;
     }
-    
+
     .arrow-dua {
         display: inline-block;
     }
-    
+
     .contact-container {
         padding-top: 20px;
     }
-    
+
     .contact-desc {
-        margin-top: 60px
+        margin-top: 80px
     }
-    
+
     .copyright {
         text-align: right;
         margin-top: 0;
+    }
+
+    .tools {
+        margin-top: 50px;
+    }
+    
+    .screenshot {
+        margin-top: 80px;
     }
 }
