@@ -379,8 +379,8 @@ footer {
 /* BACK TO TOP BUTTON */
 #whatsapp {
     position: fixed;
-    right: 0;
-    bottom: 0;
+    right: -60px;
+    bottom: -30px;
 }
 
 #whatsapp a {
@@ -606,5 +606,11 @@ footer {
     
     .korean {
         margin-top: 400px
+    }
+    
+    #whatsapp {
+        position: fixed;
+        right: 0;
+        bottom: 0;
     }
 }
