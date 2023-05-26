@@ -38,38 +38,6 @@ a:hover {
     transition: .4s ease;
 }
 
-* {
-    cursor: none;
-}
-
-.circle {
-    position: fixed;
-    background-color: #006cff;
-    width: 10px;
-    height: 10px;
-    left: -10px;
-    top: -10px;
-    border-radius: 100%;
-    z-index: 1;
-    z-index: 10000;
-    transform: scale(1);
-}
-
-.circle-follow {
-    position: fixed;
-    border: 1px solid #006cff;
-    width: 30px;
-    height: 30px;
-    left: -20px;
-    top: -20px;
-    border-radius: 100%;
-    z-index: 1;
-    user-select: none;
-    pointer-events: none;
-    z-index: 10000;
-    transform: scale(1);
-}
-
 /* FONT ICON */
 @font-face {
     font-family: 'fontello';
@@ -525,6 +493,38 @@ footer {
 
 /* DESKTOP */
 @media (min-width: 40.0rem) {
+    * {
+        cursor: none;
+    }
+
+    .circle {
+        position: fixed;
+        background-color: #006cff;
+        width: 10px;
+        height: 10px;
+        left: -10px;
+        top: -10px;
+        border-radius: 100%;
+        z-index: 1;
+        z-index: 10000;
+        transform: scale(1);
+    }
+
+    .circle-follow {
+        position: fixed;
+        border: 1px solid #006cff;
+        width: 30px;
+        height: 30px;
+        left: -20px;
+        top: -20px;
+        border-radius: 100%;
+        z-index: 1;
+        user-select: none;
+        pointer-events: none;
+        z-index: 10000;
+        transform: scale(1);
+    }
+    
     #thumbnails {
         display: inherit;
         position: absolute;
