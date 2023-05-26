@@ -53,6 +53,9 @@ $(document).ready(function () {
         requestAnimationFrame(raf)
     }
     requestAnimationFrame(raf)
+    
+    // LAZY LOAD
+    $("img").unveil();
 
     // GSAP
     // MOUSE CURSOR
