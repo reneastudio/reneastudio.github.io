@@ -377,15 +377,13 @@ footer {
 
 
 /* BACK TO TOP BUTTON */
-#backtop {
+#whatsapp {
     position: fixed;
-    right: 20px;
-    bottom: 10px;
+    right: 0;
+    bottom: 0;
 }
 
-#backtop a {
-    background: rgba(155, 77, 202, 0.58);
-    backdrop-filter: blur(20px) saturate(120%) contrast(200%);
+#whatsapp a {
     border: 0;
     cursor: none;
 }
