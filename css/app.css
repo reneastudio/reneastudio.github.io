@@ -529,11 +529,11 @@ footer {
 
     .circle {
         position: fixed;
-        background-color: #006cff;
-        width: 10px;
-        height: 10px;
-        left: -10px;
-        top: -10px;
+        background-color: #9b4dca;
+        width: 14px;
+        height: 14px;
+        left: -14px;
+        top: -14px;
         border-radius: 100%;
         z-index: 1;
         z-index: 10000;
@@ -542,11 +542,11 @@ footer {
 
     .circle-follow {
         position: fixed;
-        border: 1px solid #006cff;
+        border: 2px solid #9b4dca;
         width: 30px;
         height: 30px;
-        left: -20px;
-        top: -20px;
+        left: -22px;
+        top: -22px;
         border-radius: 100%;
         z-index: 1;
         user-select: none;
