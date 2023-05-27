@@ -27,12 +27,12 @@ $(document).ready(function () {
 
             /* Final Whatsapp URL */
             var blanter_whatsapp = walink + '?phone=' + phone + '&text=' + walink2 + '%0A%0A' +
-                '*Nama* : ' + input_name1 + '%0A' +
+                '*Name* : ' + input_name1 + '%0A' +
                 '*Email* : ' + input_email1 + '%0A' +
-                '*HP/WA* : ' + input_number1 + '%0A' +
+                '*Phone number* : ' + input_number1 + '%0A' +
                 '*Website* : ' + input_url1 + '%0A' +
                 '*Budget* : ' + input_budget1 + '%0A' +
-                '*Pesan* : ' + input_textarea1 + '%0A';
+                '*Message* : ' + input_textarea1 + '%0A';
 
             /* Whatsapp Window Open */
             window.open(blanter_whatsapp, '_blank');
