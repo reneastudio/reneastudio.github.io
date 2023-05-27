@@ -38,6 +38,10 @@ a:hover {
     transition: .4s ease;
 }
 
+small {
+    font-size: 12px !important;
+}
+
 /* FONT ICON */
 @font-face {
     font-family: 'fontello';
@@ -146,24 +150,12 @@ a:hover {
     overflow: hidden;
 }
 
-.animate-satu {
-    font-size: 20px;
-    margin-bottom: 40px;
-}
-
-.animate-satu,
-.animate-dua,
-.animate-tiga {
-    position: relative;
-}
-
 .services h6 {
     border-bottom: 1px solid #4C657D;
     padding-bottom: 8px;
-}
-
-.services p {
-    font-size: 16px;
+    text-align: left !important;
+    font-size: 20px;
+    letter-spacing: normal !important;
 }
 
 .button-large {
@@ -180,12 +172,50 @@ a:hover {
     margin-top: 20px;
 }
 
+a.tombol {
+    color: #fff !important;
+}
+
 .button .icon-right {
     float: right;
 }
 
 #thumbnails {
     display: none;
+}
+
+.underline {
+    padding: 0 0px;
+    box-shadow: inset 0 -0.2em 0 0 rgba(155, 77, 202, 0.53);
+}
+
+/* ABOUT */
+.about-container {
+    background: #fffefe;
+    padding: 80px 0;
+}
+
+.about h2 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about h6 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.about h2,
+.about h6,
+.about p,
+.about a {
+    color: #020916;
+}
+
+.about p {
+    font-size: 20px;
 }
 
 
@@ -199,7 +229,7 @@ a:hover {
 }
 
 .works h2 {
-    font-size: 60px;
+    font-size: 40px;
 }
 
 .clients-list {
@@ -255,7 +285,7 @@ a:hover {
 
 .case-study h2 {
     margin-top: 30px;
-    font-size: 60px;
+    font-size: 40px;
     margin-bottom: 40px;
 }
 
@@ -281,7 +311,7 @@ video {
 }
 
 .contact h2 {
-    font-size: 60px;
+    font-size: 40px;
     display: inline-block;
 }
 
@@ -562,8 +592,12 @@ footer {
     }
 
     .hero-text h1 {
-        font-size: 76px;
-        letter-spacing: -3px;
+        font-size: 56px;
+        letter-spacing: -2px;
+    }
+
+    .services-before {
+        padding-top: 160px
     }
 
     .arrow-satu {
@@ -611,5 +645,9 @@ footer {
         position: fixed;
         right: 0;
         bottom: 0;
+    }
+    
+    .about h2, .works h2, .case-study h2, .contact h2 {
+        font-size: 50px;
     }
 }
