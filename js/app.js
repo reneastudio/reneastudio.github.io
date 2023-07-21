@@ -8,7 +8,7 @@ $(document).ready(function () {
             phone = '6285963954968',
             walink2 = 'Halo Ari @ReneaStudio, ',
             text_yes = 'Terkirim.',
-            text_no = 'Isi semua formulir lalu klik Kirim.';
+            text_no = 'Isi semua formulir sebelum mengirim';
 
         /* Smartphone Support */
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -20,18 +20,12 @@ $(document).ready(function () {
             /* Call Input Form */
             var input_name1 = $("#wa_name").val(),
                 input_email1 = $("#wa_email").val(),
-                input_number1 = $("#wa_number").val(),
-                input_url1 = $("#wa_url").val(),
-                input_budget1 = $("#budget").val(),
                 input_textarea1 = $("#wa_textarea").val();
 
             /* Final Whatsapp URL */
             var blanter_whatsapp = walink + '?phone=' + phone + '&text=' + walink2 + '%0A%0A' +
                 '*Name* : ' + input_name1 + '%0A' +
                 '*Email* : ' + input_email1 + '%0A' +
-                '*Phone number* : ' + input_number1 + '%0A' +
-                '*Website* : ' + input_url1 + '%0A' +
-                '*Budget* : ' + input_budget1 + '%0A' +
                 '*Message* : ' + input_textarea1 + '%0A';
 
             /* Whatsapp Window Open */
@@ -42,64 +36,103 @@ $(document).ready(function () {
         }
     });
 
-    // LENIS SMOOTH SCROLL
-    const lenis = new Lenis()
-    lenis.on('scroll', (e) => {
-        console.log(e)
-    })
-
-    function raf(time) {
-        lenis.raf(time)
-        requestAnimationFrame(raf)
+$(window).on("scroll", function() {
+    if($(window).scrollTop() > 50) {
+        $(".header-container").addClass("active");
+    } else {
+        $(".header-container").removeClass("active");
     }
-    requestAnimationFrame(raf)
+});
+});
+  
 
-    // GSAP
-    // MOUSE CURSOR
-    var $circle = $('.circle'),
-        $follow = $('.circle-follow');
 
-    function moveCircle(e) {
-        TweenLite.to($circle, 0.3, {
-            x: e.clientX,
-            y: e.clientY
-        });
-        TweenLite.to($follow, 0.7, {
-            x: e.clientX,
-            y: e.clientY
-        });
-    }
+(function Accordion() {
+  const triggers = document.querySelectorAll('[data-toggle="collapse"]');
+  let activeToggle;
 
-    function hoverFunc(e) {
-        TweenLite.to($circle, 0.3, {
-            opacity: 1,
-            scale: 0
-        });
-        TweenLite.to($follow, 0.3, {
-            scale: 3
-        });
-    }
+  triggers &&
+  triggers.forEach(trigger => {
+    trigger.collapseTarget = document.querySelector(
+    trigger.hash || trigger.dataset.target);
 
-    function unhoverFunc(e) {
-        TweenLite.to($circle, 0.3, {
-            opacity: 1,
-            scale: 1
-        });
-        TweenLite.to($follow, 0.3, {
-            scale: 1
-        });
-    }
-    $(window).on('mousemove', moveCircle);
-    
-    // ANCHOR LINK
-    $("a").hover(hoverFunc, unhoverFunc);
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
+
+    trigger.collapseTarget.dataset.parent &&
+    trigger.collapseTarget.classList.contains("is-active") && (
+    activeToggle = trigger);
+
+    trigger.addEventListener("click", event => {
+      event.preventDefault();
+      event.stopPropagation();
+      toggle(trigger);
     });
 
+    // Remove height when end open transition
+    trigger.collapseTarget.addEventListener("transitionend", ({ target }) => {
+      if (!target.classList.contains("is-active")) return;
+
+      target.style.height = null;
+    });
+  });
+
+  function toggle(trigger) {
+    if (trigger.collapseTarget.classList.contains("is-active")) {
+      close(trigger);
+      activeToggle = null;
+    } else {
+      activeToggle &&
+      activeToggle.collapseTarget.dataset.parent &&
+      close(activeToggle);
+
+      trigger.collapseTarget.dataset.parent && (activeToggle = trigger);
+
+      open(trigger);
+    }
+  }
+
+  function close(trigger) {
+    setHeight(trigger.collapseTarget);
+
+    trigger.parentElement.classList.remove("is-active");
+    trigger.classList.remove("is-active");
+    trigger.collapseTarget.classList.remove("is-active");
+
+    setTimeout(() => {
+      trigger.collapseTarget.style.height = null;
+    }, 0);
+  }
+
+  function open(trigger) {
+    trigger.classList.add("is-active");
+    trigger.parentElement.classList.add("is-active");
+
+    setTimeout(() => {
+      setHeight(trigger.collapseTarget);
+      trigger.collapseTarget.classList.add("is-active");
+    }, 0);
+  }
+
+  function setHeight(target) {
+    target.style.height = target.scrollHeight + "px";
+  }
+})();
+
+
+
+// LENIS SMOOTH SCROLL
+const lenis = new Lenis({
+    duration: 1.45,
+    easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
+    orientation: "vertical",
+    gestureOrientation: "vertical",
+    smoothWheel: true,
+    smoothTouch: false,
+    touchMultiplier: 2,
 });
+
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
