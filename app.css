@@ -1,446 +1,536 @@
-/* INITIAL SET */
+@font-face {
+    font-family: 'Mattone';
+    src: url('fonts/Mattone-150.woff2') format('woff2'),
+        url('fonts/Mattone-150.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+html.lenis {
+    height: auto;
+}
+.lenis.lenis-smooth {
+    scroll-behavior: auto;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #CDFF07 #ffffff00;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff00;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #CDFF07;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+
 body {
     margin: 0;
     padding: 0;
     font-family: Plus Jakarta Sans, sans-serif;
-    font-size: 16px;
-    background: #fff;
-    background-size: cover;
+    font-size: 18px;
     color: #030000;
     overflow-x: hidden;
-}
-:root {
-    --animate-duration: 700ms;
-    --animate-delay: 0.4s;
-  }
-.container {
-    max-width: 1240px;
-}
-a, a:visited {
-    color: #434842;
-}
-a:hover {
-    transition: 0.4s ease;
+    background: url(images/frek.jpg);
 }
 
-/* HERO */
-.header-container {
-    padding-top: 0;
-    padding-bottom: 0;
-    position: fixed;
-    padding-top: 20px;
-    width: 100%;
-    z-index: 9999;
-    transition: 0.4s ease;
-    background: transparent;
-}
-.header-container.active {
-    background: #fff;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    transition: 0.4s ease;
-}
-.nama-situs h1 {
-    color: #3b1d5f;
-    font-size: 30px;
-    line-height: 90%;
-    font-weight: 800 !important;
+h1,
+h2{
+    font-family: "Mattone";
+    font-weight: 600;
+    -webkit-text-stroke: 1px #000;
+    letter-spacing: 1px;
 }
 
-
-/* SEMENTARA 
-   EDIT HEADER MENU DAN CTA BUTTON
-*/
-.header-container.active .nama-situs h1 {
-    margin-bottom: 0;
-    margin-top: 0;
-    font-size: 22px;
-    transition: 0.2s ease;
-}
-.nama-situs h1 {
-    margin-top: 9px;
-    transition: 0.2s ease;
-}
-span.header-call-btn {
-    border: 0;
-    background-color: #3b1d5f;
-    color: #e1d9ef;
-    text-align: center;
-    font-family: Plus Jakarta Sans;
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: 0.72px;
-    padding: 12px 40px 20px;
-    height: 6rem;
-    border-radius: 8px;
-    transition: 0.4s ease;
-    display: inherit;
-}
-span.header-call-btn .material-symbols-sharp {
-    top: 8px;
-    right: 10px;
-    position: relative;
-}
-
-
-/* HERO */
-.hero-container {
-    padding-top: 120px;
-    position: relative;
-}
-.hero-container:before {
-    content:"";
-    position:absolute;
-    top:0px;
-    left:0px;
-    height: 100%;
-     width: 100%;
-      background-image: url("images/header-bg.png");
-      background-position:top center;
-      background-repeat: no-repeat;
-       z-index: -9;
-      -webkit-animation: zoomin 1.5s ease;
-      animation: zoomin 1.5s ease;
-      animation-fill-mode: forwards;
-      animation-delay: 1.5s;
-      opacity: 0;
-          }
-  
-  /* Zoom in Keyframes */
-  @-webkit-keyframes zoomin {
-    0% {
-        opacity: 0;
-        transform: scale(1.2)
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1)
-      }
-  }
-  @keyframes zoomin {
-    0% {
-        opacity: 0;
-        transform: scale(1.2)
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1)
-      }
-  } /*End of Zoom in Keyframes */
-.hero {
-    padding-top: 20px;
-}
-.hero-text {
-    padding-bottom: 80px !important;
-}
-.mask {
-    overflow: hidden;
-}
-.hero-text {
-    position: relative;
-}
-.hero h1 {
-    color: #3B1D5F;
-    font-family: Plus Jakarta Sans;
-    font-size: 10rem;
-    font-style: normal;
-    font-weight: 800;
-    line-height: 88.5%; /* 225.675px */
-    letter-spacing: -6.2px;
-    margin-bottom: 0;
-}
-.hero p {
-    margin-top: 40px;
-    color: #3A3D49;
-    font-family: Plus Jakarta Sans;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%; /* 36px */
-    letter-spacing: -0.28px;
-    margin-bottom: 0;
-    padding-top: 100px;
-}
-.hero-btn {
-    margin-top: 20px;
-}
-.dotted-line {
-    display: none;
-}
-.banner-gratis {
-    position: absolute;
-    top: 120px;
-    right: 30px;
-    width: 494px;
-    height: auto;
-}
-
-/* SECTION CONTENT */
-.section-title {
-    color: #5e5e5e;
-    font-family: Plus Jakarta Sans;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 120%;
-    letter-spacing: 1.68px;
-    text-transform: uppercase;
-    text-align: center;
-}
-.section-content h2 {
-    color: #030000;
-    font-family: Plus Jakarta Sans;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 130%;
-    letter-spacing: -0.96px;
-    margin-top: 20px;
-    margin-bottom: 60px;
-    text-align: center;
-}
-
-/* CLIENTS */
-.clients-container .section-title {
-    margin-bottom: 30px;
-}
-.san-marino {
-    height: 400px;
-    border-radius: 8px;
-    background-size: cover;
-    padding: 30px;
-    position:relative;
-    margin-bottom: 30px;
-}
-.kurma {
-    height: 400px;
-    border-radius: 8px;
-    background-size: cover;
-    padding: 30px;
-    position:relative;
-    margin-bottom: 30px;
-}
-.boncafe {
-    height: 400px;
-    border-radius: 8px;
-    background-size: cover;
-    padding: 30px;
-    position:relative;
-    margin-bottom: 30px;
-}
-.kimora {
-    height: 400px;
-    border-radius: 8px;
-    background-size: cover;
-    background-position: center center;
-    padding: 30px;
-    position:relative;
-    margin-bottom: 30px;
-}
-.skv {
-    height: 400px;
-    border-radius: 8px;
-    background-size: cover;
-    background-position: left center;
-    padding: 30px;
-    position:relative;
-    margin-bottom: 30px;
-}
-.clients .tag ul {
-    list-style: none;
-}
-.clients .tag ul li {
-    display: inline-block;
-    padding: 6px 10px;
-    border-radius: 28px;
-    background: rgba(255, 255, 255, 0.50);
-    backdrop-filter: blur(7px);
+h3 {
     color: #000;
-    font-family: Plus Jakarta Sans;
-    font-size: 11px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 120%;
-    letter-spacing: 0.275px;
+    font-family: "Mattone";
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 24px; /* 109.091% */
+    -webkit-text-stroke: .5px #000;
+    letter-spacing: .5px;
+}
+
+h4,
+h5,
+h6 {
+    font-family: "Plus Jakarta Sans";
+    font-weight: 400;
     text-transform: uppercase;
-    margin-right: 8px;
 }
-.nama-klien {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    padding: 20px;
+
+.container {
+    max-width: 1320px;
 }
-.clients h5 {
+
+.preambule {
+    text-align: center;
+    padding-bottom: 40px !important;
+}
+
+.preambule h6 {
+    letter-spacing: 3px;
+}
+
+/**
+ * MENU
+**/
+.menubar-container {
+    position: fixed;
+    left: 50%;
+    top: 80px;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: all ease .4s;
+}
+
+.menubar-container.active {
+    top: 42px;
+    transition: all ease .4s;
+}
+
+.menubar {
+    margin: 0 auto;
+    font-weight: 700;
+    margin-left: -1rem;
+}
+
+.menubar-container.active .logo, .menubar-container.active .menu {
+    box-shadow: rgba(0, 0, 0, 0.36) 0px 22px 70px 4px;
+    transition: all ease .4s;
+}
+
+.menubar>.column {
+    padding: 8px 8px 2px;
+}
+
+.logo {
+    border-top-left-radius: 90px;
+    border-bottom-left-radius: 90px;
+    background: #111;
+    padding: 8px 0 0 8px !important;
+}
+
+.menu {
+    border-top-right-radius: 90px;
+    border-bottom-right-radius: 90px;
+    background: #111;
+}
+
+.menu ul {
+    list-style: none;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu ul li {
+    padding: 10px 0 12px;
+    margin-bottom: 0;
+}
+
+.menu ul li a {
     color: #fff;
-    font-family: Plus Jakarta Sans;
-    font-size: 20px;
-    font-style: normal;
-    line-height: 150%;
-    font-weight: 500;
-    letter-spacing: -0.4px;
-    display: block;
-    margin-bottom: 6px;
+    font-size: 16px;
 }
-a.link-klien {
-    color: #fff;
-    font-family: Plus Jakarta Sans;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 120%;
+
+.menu ul li.tombol-pesan {
+    background: #CDFF07;
+    border-radius: 90px;
 }
-.small-promo {
-    display: none;
+
+.menu ul li.tombol-pesan a {
+    color: #000;
+    padding-left: 18px;
+    padding-right: 18px;
 }
-.small-promo:before{
-    content:" ";
-    display: block;
-    height: 1px;
-    width: 74px;
-    position: absolute;
-    top: 25%;
-    left: 0;
-    background: #3A3D49;
-}
-.lingkaran-container {
-    display: none;
-}
-.tick {
+
+.header .menu-btn,
+.header .menu-icon {
     display: none;
 }
 
-/* BLOCKQUOTE */
-.quote {
-    position: relative;
-    text-align: center;
-    padding-top: 60px;
-    padding-bottom: 0;
+/**
+ * HERO
+**/
+.hero-container {
+    background: url(images/background-lurus.jpg) bottom center no-repeat;
+    background-size: cover;
+    background-color: #fafafa;
 }
-.quote p {
-    font-size: 20px;
-}
-.quote h2 {
-    color: #030000;
-    font-family: Plus Jakarta Sans;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 150%;
-    letter-spacing: -0.96px;
-    margin-top: 22px;
-    margin-bottom: 60px;
-}
-.cut-circle {
-    display: none;
-}
-
-
-/* PROSES */
-.proses-container {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    background-size: inherit;
-}
-.proses-container .section-title {
-    text-align: center;
-}
-.proses-container h2 {
-    color: #030000;
-    font-family: Plus Jakarta Sans;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 130%;
-    letter-spacing: -0.96px;
-    margin-top: 20px;
-    margin-bottom: 60px;
-    text-align: center;
-}
-.proses-content-pink {
-    padding: 30px;
-    border-radius: 8px;
-    background: #3b1d5f;
-    box-sizing: border-box;
-    margin-bottom: 30px;
-}
-.proses-content {
-    padding: 30px;
-    border-radius: 16px;
-    background: rgba(255, 255, 255, 0.295);
-    backdrop-filter: blur(17px);
-    border: 1px solid #fff;
-    margin-bottom: 30px;
-}
-.proses-content-pink h3 {
-    color: #fff !important;
-}
-.proses h3 {
-    color: #6C6766;
-    font-family: Plus Jakarta Sans;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 130%;
-    letter-spacing: -0.16px;
-    padding-top: 20px;    
+.hero {
+    padding-top: 220px;
+    padding-bottom: 520px;
     display: flex;
     align-items: center;
 }
-.proses span.nomer {
-    font-weight: 700;
-    font-size: 16px;
-    margin-top: 2px;
-    display: inline-block;
+
+.sparkle-stars {
+    position: absolute;
+    top: -60px;
+    margin-left: -100px;
+}
+
+.star {
+    position: absolute;
+    top: 120px;
+    right: 60px;
+}
+
+.hero-header h1 {
+    color: #000;
     text-align: center;
-    color: #fff;
-    line-height: 24px;
-    margin-right: 6px;
-    width: 24px; 
-    height: 24px;     
-    -moz-border-radius: 999px;
-    border-radius: 999px
+    font-size: 74px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1.48px;
+    -webkit-text-stroke: 2px #000;
+    position: relative;
 }
-.proses span.nomer.satu {
-    background: #5046C7;
+
+.slanted {
+    background: #CDFF07;
+    padding: 14px 12px 8px;
+    border-radius: 8px;
+    transform: skew(-2deg, 0) rotate(-2deg);
+    display: inline-block;
 }
-.proses span.nomer.dua {
-    background: #FF6645;
-}
-.proses span.nomer.tiga {
-    background: #81D9F8;
-}
-.proses-content-pink p {
-    color: #ffecfb !important; 
-}
-.proses p {
-    color: #6B6766;
+
+.hero-text {
+    color: #000;
+    text-align: center;
     font-family: Plus Jakarta Sans;
-    font-size: 18px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
-    line-height: 160%;
+    line-height: 150%;
+    margin-top: 50px;
+}
+
+.underline {
+    padding-bottom: 10px;
+    background: url("images/underline-kecil.svg") bottom no-repeat;
+}
+
+.cta-grup {
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+}
+
+.cta-button {
+    border-radius: 999px;
+    background: #000;
+    color: #CDFF07;
+    padding: 22px 24px;
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 30px;
+    box-shadow: rgba(0, 0, 0, 0.36) 0px 22px 70px 4px;
+    transition: transform .25s, visibility .25s ease-in;
+    transform: scale(1.1);
+}
+
+.cta-button:hover {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    transform: scale(1.2);
+    transition: transform .25s, visibility .25s ease-in;
+}
+
+.hero .cta-button {
+    padding: 22px 48px;
+}
+
+.review-google {
+    padding-top: 40px;
+    margin-left: 30px;
+}
+
+.cta-button .gratis {
+    background: #CDFF07;
+    color: #000;
+    padding: 4px 12px 6px;
+    font-size: 16px;
+    border-radius: 999px;
+    font-weight: 700;
+    margin-left: 8px;
+}
+
+.brands {
+    margin-top: 60px;
+}
+
+.brands-preambule {
+    color: #767676;
+    text-align: center;
+    font-family: Plus Jakarta Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+}
+
+ul.brands-logo {
+    list-style: none;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/**
+ * CARA KERJA
+**/
+.cara-kerja-container {
+    position: relative;
+}
+.cara-kerja {
+    padding-top: 110px;
+    padding-bottom: 110px;
+    text-align: center;    
+    border-radius: 24px;
+}
+
+.swirl {
+    position: absolute;
+    left: calc(50% - 10px);
+    top: -60px
+}
+
+.urutan .column {
+    padding: 0 28px !important;
+}
+
+.urutan .nomor {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.cara-kerja .column:nth-of-type(2) {
+    margin-top: 60px;
+}
+
+
+/**
+ * QUOTE
+**/
+.quote {
+    background: #f8f7f2;
+    border-radius: 32px;
+    position: relative;
+}
+
+.quote-content {
+    padding: 80px 60px 50px 340px;
+}
+
+.quote h2 {
+    font-size: 28px;
+}
+
+.quote h5 {
+    font-weight: 700;
+}
+
+.quote-icon {
+    margin-bottom: 20px;
+}
+
+.lamp {
+    position: absolute;
+    right: -50px;
+    bottom: -50px;
+}
+
+.quote-char {
+    position: absolute;
+    left: -100px;
+    bottom: -80px;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    transition: all 0.4s ease;
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+    width: 30px;
+    transition: all 0.4s ease;
+}
+
+
+
+/**
+ * KEUNGGULAN
+**/
+.keunggulan-container {
+    background: url(images/background.jpg) center top no-repeat #effdf3cb;
+    background-size: cover;
+    position: relative;
+    margin-top: 110px;
+    padding-top: 110px;
+    padding-bottom: 110px;
+    text-align: center;
+}
+
+.keunggulan h3 {
+    margin-top: 30px;
+}
+
+.daftar-keunggulan {
+    margin-bottom: 10px;
+}
+
+.daftar-keunggulan img {
+    height: 46px;
+    width: auto;
+}
+
+/** 
+ * PORTFOLIO
+**/
+.portfolio {
+    padding-top: 110px;
+    padding-bottom: 110px;
+    position: relative;
+}
+.klien h1 {
+    color: #000;
+    font-weight: 700;
+    font-size: 26px;
+    -webkit-text-stroke: 0;
+    letter-spacing: -1px;
+    line-height: 1;
     margin-bottom: 0;
 }
 
+.klien a {
+    color: #000;
+}
 
+.feat-klien {
+    margin-bottom: 10px;
+}
 
-/* DAFTAR HARGA */
+.feat-klien h4 {
+    font-family: Plus Jakarta Sans, sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    text-transform: capitalize;
+    margin-bottom: 0;
+}
+
+.feat-klien p {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.kancil {
+    background: url(images/kancil.png) center center no-repeat;
+    background-size: cover;
+    height: 670px;
+    border-radius: 32px !important;
+    padding: 40px !important; 
+    position: relative;
+}
+
+.skv {
+    background: url(images/skv.png) center center no-repeat;
+    background-size: cover;
+    height: 325px;
+    border-radius: 32px !important;
+    padding: 40px !important; 
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.radex {
+    background: url(images/radex.png) top center no-repeat;
+    background-size: cover;
+    height: 325px;
+    border-radius: 32px !important;
+    padding: 40px !important; 
+    position: relative;
+}
+
+.deskripsi {
+    border-radius: 22px;
+    padding: 26px 28px 4px 30px;
+    position: absolute;
+    bottom: 34px;
+    width: calc(100% - 80px);
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0px 0px 12px 11px rgba(0, 0, 0, 0.09);
+    backdrop-filter: blur(6px);
+}
+
+.arrow-top-right {
+    float: right;
+    margin-top: 10px;
+}
+
+.portfolio h2 {
+    padding-right: 0;
+}
+
+.klien {
+    display: flex;
+    align-items: center;
+    border-top: 0.0625rem dashed #0f1422;
+    padding: 40px 0;
+}
+
+.klien:first-child {
+    border-top: none;
+}
+
+.role {
+    text-transform: uppercase;
+    font-size: 12px;
+    text-align: right;
+}
+
+/** 
+ * DAFTAR HARGA
+**/
 .daftar-harga-container {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    background: #f5f5f5;
+    background: url(images/background.jpg) center top no-repeat #effdf3cb;
+    background-size: cover;
+    padding-top: 110px;
+    padding-bottom: 190px;
+    position: relative;
 }
 .harga-title {
     text-align: center;
 }
 .daftar-harga {
-    background: #f8f4ffd5;
+    background: #ffffffd5;
     backdrop-filter: blur(7px);
     border: 1px solid #fff;
-    border-radius: 8px;
-    margin-top: 0;
+    border-radius: 32px;
+    margin-top: 52px;
     display: flex;
     height: auto;   
 }
@@ -459,7 +549,7 @@ a.link-klien {
     text-align: right;
 }
 .daftar-harga .paket {
-    padding: 42px 40px;
+    padding: 42px 40px 34px;
     position:relative;
     display:flex;
     flex-direction:column;
@@ -468,16 +558,11 @@ a.link-klien {
 }
 .daftar-harga .paket.feat {
     position: relative;
-    top: 0;
-    border-radius: 8px;
-    background: #3b1d5f;
+    top: -44px;
+    border-radius: 32px;
+    background: #CDFF07;
     box-sizing: border-box;
     font-weight: 500;
-    color: #ebebf1;
-}
-.daftar-harga .paket.feat h3 {
-    font-size: 24px;
-    color: #ffa500;
 }
 .daftar-harga .paket.feat .fire {
     position: absolute;
@@ -485,9 +570,6 @@ a.link-klien {
 }
 .daftar-harga .paket.feat .feat-harga-title {
     margin-left: 40px;
-}
-.daftar-harga .paket.feat .harga.feat {
-    color: #fff0b8;
 }
 .paket small, .harga.feat small {
     font-size: 12px;
@@ -506,15 +588,11 @@ span.harga {
     list-style-image: url(images/check-mark-dark.svg);
     font-size: 18px;
 }
-.daftar-harga .paket.feat ul li {
-    list-style-image: url(images/check-mark-putih.svg);
-    font-size: 18px;
-}
 .button.pesan-sekarang {
-    border-radius: 8px;
+    border-radius: 999px;
     border: 0;
     background: #e1d9ef;
-    color: #8645ff;
+    color: #606c76;
     font-family: Plus Jakarta Sans;
     font-size: 20px;
     font-weight: 700;
@@ -527,10 +605,10 @@ span.harga {
     transition: 0.4s ease;
 }
 .paket.feat .button.pesan-sekarang {
-    border-radius: 8px;
+    border-radius: 999px;
     border: 0;
-    background: #8645ff;
-    color: #f8f4ff;
+    background: #000;
+    color: #CDFF07;
     font-family: Plus Jakarta Sans;
     font-size: 20px;
     font-weight: 700;
@@ -541,20 +619,21 @@ span.harga {
     display: inline-table;
     transition: 0.4s ease;
 }    
-.paket a.button.button.pesan-sekarang:hover {
-    background: #606c76;
-    color: #ECF5F6;
-    transition: 0.4s ease;
+.paket a.button.button.pesan-sekarang:hover, .paket.feat a.button.button.pesan-sekarang:hover {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    transform: scale(1.1);
+    transition: transform .25s, visibility .25s ease-in;
 }
 .info-small {
     margin-top: 30px;
 }
 
-/* FAQ */
+/** 
+ * FAQ
+**/
 .faq-container {
-    background: #fff;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 .collapse {
     overflow: hidden;
@@ -568,7 +647,7 @@ span.harga {
   }
   
   .accordion {
-    --background: #f8f4ff;
+    --background: #fff;
     --border-radius: 8px;
     border-radius: var(--border-radius);
     background: var(--background);
@@ -596,7 +675,7 @@ span.harga {
     border-bottom-color: transparent;
   }
   .card.is-active {
-    background: #fff;
+    background: #fcfcfc;
     border-radius: var(--border-radius);
   }
   .card.is-active + .card {
@@ -665,114 +744,202 @@ span.harga {
     margin-left: 10px;
   }
 
-/* FORM */
-.whatsapp-form {
-    margin-top: 40px;
-}    
-input[type="text"],
-input[type="email"],
-textarea {
-    padding-top: 28px;
-    padding-bottom: 28px;
-    padding-left: 14px;
-    padding-right: 14px;
-    margin-bottom: 18px;
-    border-radius: 8px;
-    font-size: 16px;
-    color: #030000;
-    background: #ffffffae !important;
-}    
-/* WEBKIT FORM HACK FOR AUTO FILL INPUT */
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-    transition: background-color 5000s ease-in-out 0s;
-    -webkit-text-fill-color: #030000 !important;
-}    
-.whatsapp-form input {
-    display: block;
-    background-color: transparent;
-}
-#text-info {
-    margin-top: 4px;
-}
-#text-info span.yes {
-    color: #009933;
-    font-weight: 700;
-}
-#text-info span.no {
-    color: #990000;
-    font-weight: 700;
-}
-span.form-btn {
-    border: 0;
-    background: #e1d9ef;
-    color: #8645ff;
-    text-align: center;
-    font-family: Plus Jakarta Sans;
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: 0.72px;
-    padding: 6px 40px 18px;
-    height: 5rem;
-    border-radius: 8px;
-    transition: 0.4s ease;
-    display: inherit;
-}
 
-
-
-/* FOOTER */
-.footer-container {
-    background: #f5f5f5;
-    padding-top: 60px;
-    padding-bottom: 60;
-    font-size: 18px;
-}
-.footer h1 {
+/**
+ * MARQUEE 
+**/
+.marquee {
+    font-family: 'Mattone', sans-serif;
+    display: flex;
+    position: relative;
+    top: -80px;
+    left: 0;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    white-space: nowrap;
+    transform: scale(1.4);
+    transition: all 1s ease;
+    overflow: hidden;
+  }
+  .marquee .text {
+    margin: 0;
+    font-size: 80px;
+    color: #000;
+    transition: all 2s ease;
     font-weight: 800;
-    color:#3b1d5f;
-    line-height: 90%;
+    background: transparent;
+    line-height: 1.2;
+  }
+  .marquee .text > .outline {
+    -webkit-text-stroke: 2px #000;
+    color: transparent;
+  }
+  .marquee > div {
+    display: flex;
+    -webkit-animation: scrollText 120s infinite linear;
+            animation: scrollText 120s infinite linear;
+  }
+  .marquee.right > div {
+    display: flex;
+    -webkit-animation: scrollTextRight 120s infinite linear;
+            animation: scrollTextRight 120s infinite linear;
+  }
+  @-webkit-keyframes scrollText {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes scrollText {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @-webkit-keyframes scrollTextRight {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+  @keyframes scrollTextRight {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+.content-end {
+    background: #000;
 }
-.footer h5 {
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 10px;
+.curve-end {
+    padding: 50px 0;
+    background: url(images/frek.jpg) top center no-repeat;
+    border-bottom-left-radius: 64px;
+    border-bottom-right-radius: 64px;
 }
-.sosmed {
-    text-align: left;
+
+/**
+ * FOOTER 
+**/
+.footer {
+    background: #000;
+    color: #f1f1f1;
+    padding-top: 110px;
 }
-.end {
-    margin-top: 60px;
-    border-top: 2px solid #b8b8b8;
-    padding-top: 40px;
+
+.cta-footer {
     text-align: center;
 }
-.end ul {
-    list-style: none;
-    text-align: center;
-    margin-top: 20px;
+
+.footer h1 {
+    font-size: 74px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1.48px;
+    -webkit-text-stroke: 2px #f1f1f1;
+    position: relative;
 }
-.end ul li {
+
+.footer-text {
+    font-family: Plus Jakarta Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    margin-top: 50px;
+}
+
+.footer .slanted {
+    background: #CDFF07;
+    color: #000;
+    padding: 14px 12px 8px;
+    border-radius: 8px;
+    transform: skew(-2deg, 0) rotate(-2deg);
     display: inline-block;
-    margin-right: 15px;
-    margin-left: 15px;
-}
-.end img {
-    filter: grayscale(100%);
-    height: 24px;
-    width: auto;
+    -webkit-text-stroke: 2px #000;
 }
 
+.footer .cta-button {
+    border-radius: 999px;
+    color: #000;
+    background: #CDFF07;
+    padding: 22px 24px;
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 30px;
+    transition: transform .25s, visibility .25s ease-in;
+    transform: scale(1.1);
+}
 
-/* MOBILE COLUMN RESET */
-@media (max-width: 40.0rem) {
+.footer .cta-button:hover {
+    transform: scale(1.2);
+    transition: transform .25s, visibility .25s ease-in;
+}
+
+.footer .cta-button {
+    padding: 22px 26px;
+}
+
+.footer .cta-button .gratis {
+    color: #CDFF07;
+    background: #000;
+    padding: 4px 12px 6px;
+    font-size: 16px;
+    border-radius: 999px;
+    font-weight: 700;
+    margin-left: 8px;
+}
+
+.about {
+    margin-top: 110px;
+    padding-top: 110px;
+    color: #b3b3b3;
+    border-top: 1px solid #525252;
+}
+
+.profil {
+    border-radius: 999px;
+    max-width: 136px;
+    height: auto;
+}
+
+.copyright {
+    font-size: 14px;
+    margin-top: 110px;
+    padding-bottom: 40px;
+}
+
+.instagram {
+    text-align: right;
+}
+
+.copyright a {
+    color: #b3b3b3;
+}
+
+/**
+ * MOBILE VIEW 
+ **/
+@media (max-width: 640px) {
+    /**
+    * RESET MILIGRAM 
+    **/
     .column.column-20,
     .column.column-30,
     .column.column-33,
     .column.column-40,
     .column.column-50,
+    .column.column-60,
     .column.column-67,
     .column.column-80 {
         max-width: 100% !important;
@@ -781,15 +948,51 @@ span.form-btn {
     .column-offset-10 {
         margin-left: 0 !important;
     }
-    .header .navbar {
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 100%;
+    /**
+    * MENU
+    **/
+    .menubar-container {
+        position: sticky;
+        left: 0;
+        top: 20px;
+        transform: translate(0, 0);
+        
     }
 
+    .menubar-container.active {
+        top: 10px;
+    }
+
+    .menubar {
+        margin-left: 0;
+        position: relative;
+    }
+    
+    .menubar>.column {
+        padding: 0;
+    }
+    
+    .logo {
+        border-top-right-radius: 90px;
+        border-bottom-right-radius: 90px;
+    }
+
+    .menu {
+        border-top-left-radius: 28px;
+        border-top-right-radius: 28px;
+        border-bottom-right-radius: 28px;
+        border-bottom-left-radius: 28px;
+        position: absolute;
+        margin-top: 10px;
+    }
+    
+    .header .menu-btn,
+    .header .menu-icon {
+        display: inherit;
+    }
+    
     label {
-        margin-bottom: 39px;
+        margin-bottom: 10px;
     }
 
     .header ul {
@@ -797,26 +1000,40 @@ span.form-btn {
         padding: 0;
         list-style: none;
         overflow: hidden;
-        background: #fff;
+        background: #111;
         position: relative;
         top: 0;
+        display: block
     }
-
-    .header-container.active .header ul {
-        top: -36px;
+    
+    .header ul li {
+        padding: 0;
     }
 
     .header li a {
         display: block;
-        padding: 20px;
+        padding: 14px 30px;
         text-decoration: none;
-        color: #3b1d5f;
+        color: #fff;
+    }
+    
+    .menu ul li.tombol-pesan {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    
+    .menu ul li.tombol-pesan a {
+        padding-left: 30px;
+        padding-right: 30px;
+        
     }
 
     .header li a:hover,
     .header .menu-btn:hover {
-        background: #e1d9ef;
-        color: #8645ff;
+        background: #cdf44f;
+        color: #111;
         padding-left: 40px;
     }
 
@@ -836,7 +1053,7 @@ span.form-btn {
     }
 
     .header .menu-icon .navicon {
-        background: #3b1d5f;
+        background: #111;
         display: block;
         height: 2px;
         position: relative;
@@ -846,7 +1063,7 @@ span.form-btn {
 
     .header .menu-icon .navicon:before,
     .header .menu-icon .navicon:after {
-        background: #3b1d5f;
+        background: #fff;
         content: '';
         display: block;
         height: 100%;
@@ -869,7 +1086,7 @@ span.form-btn {
     }
 
     .header .menu-btn:checked ~ .menu {
-        max-height: 406px;
+        max-height: 418px;
         -webkit-box-shadow: 0px 10px 31px -12px rgba(0, 0, 0, 0.4);
         -moz-box-shadow: 0px 10px 31px -12px rgba(0, 0, 0, 0.4);
         box-shadow: 0px 10px 31px -12px rgba(0, 0, 0, 0.4);
@@ -892,351 +1109,231 @@ span.form-btn {
         top: 0;
     }
 
-    /* MARQUEE */
-    .marquee, .marquee.right {
-        display: none;
-    }
-}
-
-
-/* DESKTOP */
-@media (min-width: 40.0rem) {
-    .header-container {
-        padding-top: 40px;
-    }
-    .header-container ul {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .header-container.active {
-        background: #ffffffe5;
-        backdrop-filter: blur(9px);
-        padding-bottom: 0;
-    }
-    .header-container.active ul {
-        margin-bottom: 0;
-    }
-    .header-container.active ul li {
-        margin-bottom: 0;
-        padding: 0 0 12px;
-    }
-    .header-container ul li.cta-header {
-        float: right;
-    }
-    .header-container.active span.header-call-btn {
-        height: 5.5rem;
-    }    
-    .header .menu-btn,
-    .header .menu-icon {
-        display: none;
-    }
-    .menu {
-        list-style: none;
-        display: inherit;
-    }
-    .menu li {
-        display: inline-block;
-        text-transform: uppercase;
-        padding: 20px 0;
-        font-weight: 700;
-    }
-    span.header-call-btn {
-        padding: 12px 40px 14px;
-        height: 5rem;
-    }
-    .hero-container {
-        padding-top: 180px;
-    }
-    .hero h1 {
-        font-size: 255px;
-        letter-spacing: -10.2px;
-    }
-    .hero p {
-        font-size: 30px;
-        font-weight: 500;
-        margin-top: 0;
-        padding-top: 80px;
-    }
-    .hero-btn {
-        margin-top: 20px;
-    }
-    .dotted-line {
-        display: inherit;
-        position: absolute;
-        left: 500px;
-    }
-
-    /* SECTION CONTENT */
-    .section-title {
-        color: #5e5e5e;
-        font-family: Plus Jakarta Sans;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 120%;
-        letter-spacing: 1.68px;
-        text-transform: uppercase;
-        text-align: center;
-    }
-    .section-content h2 {
-        color: #030000;
-        font-family: Plus Jakarta Sans;
-        font-size: 36px;
-        font-style: normal;
-        font-weight: 800;
-        line-height: 150%;
-        letter-spacing: -0.96px;
-        margin-top: 22px;
-        margin-bottom: 60px;
-        text-align: center;
-    }
-    .banner-gratis {
-        position: absolute;
-        top: 130px;
-        right: -200px;
-        width: 494px;
-        height: auto;
-    }
-
-    /* CLIENTS */
-    .clients-container .section-title {
-        text-align: left;
-        margin-bottom: 30px;
-    }
-    .san-marino {
-        height: 500px;
-        margin-top: -100px;
-    }
-    .kurma {
-        height: 500px;
-        margin-top: 180px;
-    }
-    .boncafe {
-        height: 400px;
-    }
-    .kimora {
-        height: 450px;
-    }
-    .skv {
-        height: 350px;
-    }
-    .small-promo {
-        display: inherit;
-        position: relative;
-        margin-top: 280px;
-        margin-left: 74px;
-    }
-    .small-promo:before{
-        content:" ";
-        display: block;
-        height: 1px;
-        width: 54px;
-        position: absolute;
-        top: 25%;
-        left: -74px;
-        margin-right: 20px;
-        background: #3A3D49;
-    }
-    .lingkaran-container {
-        margin: 80px auto;
-        text-align: center;
-        display: block;
-        position: relative;
-    }
-    .lingkaran {
-        -webkit-animation:spin 14s linear infinite;
-        -moz-animation:spin 14s linear infinite;
-        animation:spin 14s linear infinite;
-    }
-    .tick {
-        display: inherit;
-        position: absolute;
-        top: 100px;
-        left: 174px;
-    }
-    @-moz-keyframes spin { 
-        100% { -moz-transform: rotate(360deg); } 
-    }
-    @-webkit-keyframes spin { 
-        100% { -webkit-transform: rotate(360deg); } 
-    }
-    @keyframes spin { 
-        100% { 
-            -webkit-transform: rotate(360deg); 
-            transform:rotate(360deg); 
-        } 
-    }
-
-    /* BLOCKQUOTE */
-    .quote {
+    /**
+    * HERO
+    **/
+    .hero {
         padding-top: 100px;
-        margin-top: 100px;
+        padding-bottom: 420px;
     }
+    .hero-header h1 {
+        font-size: 3.625rem;
+        -webkit-text-stroke: 1px #000;
+    }
+
+    .hero-text {
+        font-size: 1.8rem;
+    }
+
+    .cta-grup {
+        display: block;
+    }
+
+    .review-google {
+        padding-top: 40px;
+        margin-left: 0;
+        display: block;
+    }
+
+    .brands {
+        display: none
+    }
+
+    /**
+    * CARA KERJA
+    **/
+    .cara-kerja-container {
+        position: relative;
+    }
+    
+    .cara-kerja h2 {
+        font-size: 2.8rem;
+    }
+
+    .cara-kerja .column:nth-of-type(2) {
+        margin-top: 0;
+    }
+    
+    .cta-button {
+        transform: scale(1.0);
+    }
+
+
+    /**
+    * QUOTE
+    **/
+    .quote-content {
+        padding: 40px;
+    }
+
     .quote h2 {
-        font-size: 42px;
+        font-size: 1.8rem;
+        -web
     }
-    .quote p {
-        font-size: 24px;
-    }
-    .cut-circle {
-        display: inherit;
-        position: absolute;
-        right: 70px;
-        top: 70px;
-    }
-    .squirt {
-        position: absolute;
-        left: 0;
-        bottom: 0;
+
+    .quote-char {
+        display: none;
     }
 
 
-    /* PROSES */
-    .proses-container {
-        margin-top: 160px;
-        padding-top: 240px;
-        padding-bottom: 160px;
-        background-size: inherit;
+
+    /**
+    * KEUNGGULAN
+    **/
+    .keunggulan h2 {
+        font-size: 2.8rem;
     }
-    .proses-container .section-title {
+
+    .keunggulan h3 {
+        font-size: 1.8rem;
+        margin-top: 24px;
+    }
+
+    .daftar-keunggulan {
+        font-size: 1.6rem;
+    }
+
+    /** 
+    * PORTFOLIO
+    **/
+    .portfolio h2 {
+        font-size: 2.8rem;
+    }
+    
+    .klien h1 {
+        font-size: 2rem;
+        -webkit-text-stroke: 1px;
+        letter-spacing: 0;
+        line-height: 3rem
+    }
+    
+    .feat-klien {
+        margin-bottom: 10px;
+    }
+
+    .feat-klien h4 {
+        font-size: 2rem;
+        margin-bottom: 6px;
+    }
+
+    .feat-klien p {
+        font-size: 12px;
+    }
+
+    .kancil {
+        height: 325px;
+        padding: 10px !important; 
+    }
+
+    .skv {
+        padding: 10px !important; 
+    }
+
+    .radex {
+        padding: 10px !important; 
+    }
+
+    .deskripsi {
+        bottom: 10px;
+        width: calc(100% - 20px);
+    }
+
+    .arrow-top-right {
+        display: none
+    }
+
+    .role {
+        margin-top: 4px;
         text-align: left;
     }
-    .proses-container h2 {
-        text-align: left;
-    }
-    .proses-content-pink {
-        margin-bottom: 0;
-    }
-    .proses-content {
-        margin-bottom: 0;
-    }
 
-    /* DAFTAR HARGA */
-    .daftar-harga-container {
-        background: url(images/abstract.png) 30% center no-repeat #f5f5f5;
-        background-size: contain;
-        padding-top: 160px;
-        padding-bottom: 160px;
-    }
+    /** 
+    * DAFTAR HARGA
+    **/
     .daftar-harga {
-        margin-top: 52px;
+        margin-top: 0;
+    }
+    .daftar-harga-container h2 {
+        font-size: 2.8rem;
+    }
+    .daftar-harga h3 {
+        font-size: 2rem;
+    }
+    .daftar-harga .paket {
+        padding: 22px 22px 14px 20px;
     }
     .daftar-harga .paket.feat {
-        top: -52px;
+        top: 0;
+        padding: 22px 26px 14px;
     }
-    .daftar-harga .paket.feat h3 {
-        font-size: 24px;
+    .daftar-harga .paket.feat .fire {
+        left: 6px;
     }
-
-    /* MARQUEE */
-    .marquee {
-        font-family: 'Inter', sans-serif;
-        font-weight: 900;
-        display: flex;
-        position: relative;
-        top: -100px;
-        left: 0;
-        align-items: center;
-        justify-content: flex-start;
-        width: 100%;
-        white-space: nowrap;
-        transform: scale(2);
-        transition: all 1s ease;
-      }
-      .marquee .text {
-        margin: 0;
-        font-size: 100px;
-        color: #3b1d5f;
-        transition: all 2s ease;
-        font-weight: 800;
-        font-style: italic;
-        background: transparent;
-      }
-      .marquee .text > .outline {
-        -webkit-text-stroke: 1px #3b1d5f;
-        color: transparent;
-      }
-      .marquee > div {
-        display: flex;
-        -webkit-animation: scrollText 120s infinite linear;
-                animation: scrollText 120s infinite linear;
-      }
-      .marquee.right > div {
-        display: flex;
-        -webkit-animation: scrollTextRight 120s infinite linear;
-                animation: scrollTextRight 120s infinite linear;
-      }
-      @-webkit-keyframes scrollText {
-        from {
-          transform: translateX(0%);
-        }
-        to {
-          transform: translateX(-50%);
-        }
-      }
-      @keyframes scrollText {
-        from {
-          transform: translateX(0%);
-        }
-        to {
-          transform: translateX(-50%);
-        }
-      }
-      @-webkit-keyframes scrollTextRight {
-        from {
-          transform: translateX(-50%);
-        }
-        to {
-          transform: translateX(0%);
-        }
-      }
-      @keyframes scrollTextRight {
-        from {
-          transform: translateX(-50%);
-        }
-        to {
-          transform: translateX(0%);
-        }
-      }
-
-    /* FAQ */
-    .faq-container {
-        padding-top: 60px;
-        padding-bottom: 160px;
+    .paket small, .harga.feat small {
+        font-size: 10px;
     }
-    .card__title span {
-      width: 92%;
+    .daftar-harga ul li {
+        font-size: 1.6rem;
+    }
+    span.harga {
+        color: #000;
     }
 
-    /* FOOTER */
-    .footer-container {
-        padding-top: 160px;
-        padding-bottom: 0;
+    /** 
+    * FAQ
+    **/
+    .faq-container h2 {
+        font-size: 2.8rem;
     }
-    .footer h5 {
-        margin-bottom: 20px;
+    .card {
+        padding: 16px
     }
-    .sosmed {
-        text-align: right;
+    .marquee .text {
+        font-size: 4rem;
     }
-    .end {
-        margin-top: 60px;
-        border-top: 2px solid #b8b8b8;
-        padding-top: 40px;
-        text-align: inherit;
+    .curve-end {
+        padding: 20px 0;
     }
-    .end ul {
-        list-style: none;
-        text-align: right;
-        margin-top: 10px;
+
+    /**
+    * FOOTER 
+    **/
+    .footer {
+        background: #000;
+        color: #f1f1f1;
+        padding-top: 110px;
     }
-    .end ul li {
-        display: inline-block;
-        margin-left: 30px;
-        margin-right: 0;
+
+    .cta-footer {
+        text-align: center;
     }
-    #text-info {
-        margin-top: 14px;
+
+    .footer h1 {
+        font-size: 3.625rem;
+        -webkit-text-stroke: 0 #fff;
+    }
+
+    .footer-text {
+        font-size: 1.6rem;
+    }
+
+    .footer .cta-button {
+        transform: scale(1.0);
+    }
+
+    .footer .cta-button:hover {
+        transform: scale(1.1);
+    }
+    
+    .about {
+        padding-top: 60px
+    }
+    
+    .profil {
+        width: 90px;
+    }
+    
+    .instagram {
+        text-align: left;
     }
 }
