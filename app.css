@@ -1121,7 +1121,7 @@ span.harga {
     * HERO
     **/
     .hero {
-        padding-top: 140px;
+        padding-top: 120px;
         padding-bottom: 420px;
     }
     .hero-header h1 {
@@ -1244,6 +1244,7 @@ span.harga {
     .deskripsi {
         bottom: 10px;
         width: calc(100% - 20px);
+        padding: 26px 28px 0 30px;
     }
 
     .arrow-top-right {
