@@ -424,6 +424,7 @@ ul.brands-logo {
     letter-spacing: -1px;
     line-height: 1;
     margin-bottom: 0;
+    -webkit-text-stroke: .5px #000;
 }
 
 .klien a {
@@ -435,16 +436,21 @@ ul.brands-logo {
 }
 
 .feat-klien h4 {
-    font-family: Plus Jakarta Sans, sans-serif;
+    font-family: "Mattone";
     font-weight: 700;
-    font-size: 22px;
+    font-size: 20px;
     text-transform: capitalize;
     margin-bottom: 0;
+    -webkit-text-stroke: .5px #000;
 }
 
 .feat-klien p {
     font-size: 14px;
     text-transform: uppercase;
+}
+
+.feat-klien a {
+    color: #000;
 }
 
 .kancil {
@@ -579,6 +585,7 @@ ul.brands-logo {
 span.harga {
     float: right;
     color: #827C7A;
+    -webkit-text-stroke: 0;
 }
 .daftar-harga ul {
     list-style-position: outside;
@@ -1202,7 +1209,7 @@ span.harga {
     
     .klien h1 {
         font-size: 2rem;
-        -webkit-text-stroke: 1px;
+        -webkit-text-stroke: .5px;
         letter-spacing: 0;
         line-height: 3rem
     }
