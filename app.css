@@ -952,7 +952,8 @@ span.harga {
         max-width: 100% !important;
         width: 100% !important;
     }
-    .column-offset-10 {
+    .column-offset-10,
+    .column-offset-20 {
         margin-left: 0 !important;
     }
     /**
