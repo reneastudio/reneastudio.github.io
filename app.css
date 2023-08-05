@@ -962,13 +962,13 @@ span.harga {
     .menubar-container {
         position: sticky;
         left: 0;
-        top: 20px;
+        top: 40px;
         transform: translate(0, 0);
         
     }
 
     .menubar-container.active {
-        top: 10px;
+        top: 20px;
     }
 
     .menubar {
@@ -1121,7 +1121,7 @@ span.harga {
     * HERO
     **/
     .hero {
-        padding-top: 100px;
+        padding-top: 140px;
         padding-bottom: 420px;
     }
     .hero-header h1 {
