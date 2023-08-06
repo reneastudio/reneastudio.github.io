@@ -54,6 +54,17 @@ body {
     background: url(images/frek.jpg);
 }
 
+a,
+a:visited {
+    color: #000;
+    transition: all .4s ease;
+}
+
+a:hover {
+    color: #cdff07;
+    transition: all .4s ease;
+}
+
 h1,
 h2{
     font-family: "Mattone";
@@ -935,6 +946,71 @@ span.harga {
     color: #b3b3b3;
 }
 
+
+/**
+ * BLOG
+ **/
+.blog-container {
+    background: url(images/background.jpg) center center no-repeat;
+    background-size: cover;
+    background-color: #fafafa;
+}
+.blog {
+    padding-top: 220px;
+    padding-bottom: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.blog-header h1 {
+    color: #000;
+    text-align: center;
+    font-size: 74px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1.48px;
+    -webkit-text-stroke: 2px #000;
+    position: relative;
+}
+
+.blog-text {
+    color: #000;
+    text-align: center;
+    font-family: Plus Jakarta Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    margin-top: 50px;
+}
+
+/**
+ * BLOG POST
+**/
+.blog-container {
+    position: relative;
+}
+.blog-post {
+    padding-top: 110px;
+    padding-bottom: 110px;
+    text-align: center;    
+}
+
+.blog-post-single {
+    padding-top: 110px;
+    padding-bottom: 20px;
+}
+
+.blog-content {
+    font-size: 2rem;
+    text-align: left;
+}
+
+.blog-content img {
+    padding-bottom: 30px;
+}
+
 /**
  * MOBILE VIEW 
  **/
@@ -1041,7 +1117,7 @@ span.harga {
 
     .header li a:hover,
     .header .menu-btn:hover {
-        background: #cdf44f;
+        background: #cdff07;
         color: #111;
         padding-left: 40px;
     }
@@ -1119,18 +1195,26 @@ span.harga {
     }
 
     /**
-    * HERO
+    * HERO - BLOG
     **/
     .hero {
-        padding-top: 120px;
+        padding-top: 100px;
         padding-bottom: 420px;
     }
-    .hero-header h1 {
+
+    .blog {
+        padding-top: 100px;
+        padding-bottom: 110px;
+    }
+
+    .hero-header h1,
+    .blog-header h1 {
         font-size: 3.625rem;
         -webkit-text-stroke: 1px #000;
     }
 
-    .hero-text {
+    .hero-text,
+    .blog-text {
         font-size: 1.8rem;
     }
 
@@ -1149,13 +1233,15 @@ span.harga {
     }
 
     /**
-    * CARA KERJA
+    * CARA KERJA & BLOG POSTS LIST
     **/
-    .cara-kerja-container {
+    .cara-kerja-container,
+    .blog-post-container {
         position: relative;
     }
     
-    .cara-kerja h2 {
+    .cara-kerja h2,
+    .blog-post h2 {
         font-size: 2.8rem;
     }
 

@@ -123,7 +123,7 @@ $(document).ready(function () {
 
     // LENIS SMOOTH SCROLL
     const lenis = new Lenis({
-      duration: 1.45,
+      duration: 1.75,
       easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
       orientation: "vertical",
       gestureOrientation: "vertical",
