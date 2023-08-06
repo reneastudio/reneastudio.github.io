@@ -863,7 +863,7 @@ span.harga {
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .footer .slanted {
@@ -886,6 +886,7 @@ span.harga {
     margin-top: 30px;
     transition: transform .25s, visibility .25s ease-in;
     transform: scale(1.1);
+    margin-top: 50px;
 }
 
 .footer .cta-button:hover {
