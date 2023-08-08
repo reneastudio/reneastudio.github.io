@@ -256,7 +256,7 @@ h6 {
     border-radius: 999px;
     background: #000;
     color: #CDFF07;
-    padding: 22px 24px;
+    padding: 22px 48px;
     font-weight: 700;
     display: inline-block;
     margin-top: 30px;
@@ -273,10 +273,6 @@ h6 {
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     transform: scale(1.2);
     transition: transform .25s, visibility .25s ease-in;
-}
-
-.hero .cta-button {
-    padding: 22px 48px;
 }
 
 .review-google {
@@ -902,6 +898,9 @@ span.harga {
     transition: transform .25s, visibility .25s ease-in;
     transform: scale(1.1);
     margin-top: 50px;
+}
+.footer .cta-button:visited {
+    color: #000 !important;
 }
 
 .footer .cta-button:hover {
