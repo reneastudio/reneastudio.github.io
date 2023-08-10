@@ -939,10 +939,17 @@ span.harga {
     font-size: 14px;
     margin-top: 110px;
     padding-bottom: 40px;
+    text-align: right;
 }
 
 .instagram {
-    text-align: right;
+    position: relative;
+    text-align: left;
+}
+
+.ig-icon {
+    position: absolute;
+    top: -65px;
 }
 
 .copyright a {
@@ -1432,7 +1439,7 @@ span.harga {
         width: 90px;
     }
     
-    .instagram {
+    .instagram, .copyright {
         text-align: left;
     }
 }
