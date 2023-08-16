@@ -432,7 +432,7 @@ ul.brands-logo {
     font-weight: 700;
     font-size: 26px;
     -webkit-text-stroke: 0;
-    letter-spacing: -1px;
+    letter-spacing: 0;
     line-height: 1;
     margin-bottom: 0;
     -webkit-text-stroke: .5px #000;
@@ -452,6 +452,7 @@ ul.brands-logo {
     font-size: 20px;
     text-transform: capitalize;
     margin-bottom: 0;
+    letter-spacing: 0;
     -webkit-text-stroke: .5px #000;
 }
 
