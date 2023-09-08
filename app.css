@@ -850,7 +850,7 @@ span.harga {
  * FOOTER 
 **/
 .footer {
-    background: #000;
+    background: url(images/papan.jpg) center center no-repeat #000;
     color: #f1f1f1;
     padding-top: 110px;
 }
