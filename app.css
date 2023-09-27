@@ -210,7 +210,7 @@ h6 {
 }
 
 .hero {
-    padding-top: 180px;
+    padding-top: 200px;
     padding-bottom: 520px;
     display: flex;
     align-items: center;
@@ -260,7 +260,7 @@ h6 {
 }
 
 .sub-hero {
-    padding: 20px 40px;
+    padding: 40px !important;
 }
 
 .desc {
@@ -1444,7 +1444,7 @@ a.close-chat {
         font-size: 2.2rem;
     }
     .sub-hero {
-        padding: 0;
+        padding: 0 !important;
     }
 
     .desc {
