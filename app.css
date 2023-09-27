@@ -231,7 +231,7 @@ h6 {
 .hero-header h1 {
     color: #000;
     text-align: center;
-    font-size: 74px;
+    font-size: 76px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -252,16 +252,19 @@ h6 {
     color: #000;
     text-align: center;
     font-family: Plus Jakarta Sans;
-    font-size: 29px;
+    font-size: 28px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
     margin-top: 10px;
 }
-.sub-hero-text {
-    font-size: 18px;
-    line-height: 140%;
-    padding-bottom: 20px !important;
+.desc {
+    font-size: 30px;
+    line-height: 150%;
+    padding-top: 100px !important;
+    padding-bottom: 180px !important;
+    display: flex;
+    align-items: center;
 }
 
 .underline {
@@ -1238,7 +1241,8 @@ a.close-chat {
     }
 
     .column-offset-10,
-    .column-offset-20 {
+    .column-offset-20,
+    .column-offset-25 {
         margin-left: 0 !important;
     }
 
@@ -1420,18 +1424,30 @@ a.close-chat {
         padding-bottom: 110px;
     }
 
-    .hero-header h1,
-    .blog-header h1 {
-        font-size: 3.925rem;
+    .hero-header h1 {
+        font-size: 5rem;
         -webkit-text-stroke: 1px #000;
+    }
+    .blog-header h1 {
+        font-size: 3.4rem;
+        -webkit-text-stroke: 1px #000;
+        letter-spacing: 0.5px;
     }
 
     .hero-text,
     .blog-text {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
     }
-    .sub-hero-text {
-        padding-bottom: 0 !important;
+    .desc {
+        font-size: 2.2rem;
+        padding-top: 20px !important;
+        padding-bottom: 100px !important;
+    }
+
+    .blog-post-single ul,
+    .blog-post-single ol {
+        list-style-position: outside;
+        margin-left: 2.2rem;
     }
 
     .cta-grup {
