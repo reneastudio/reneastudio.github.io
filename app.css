@@ -258,6 +258,11 @@ h6 {
     line-height: 150%;
     margin-top: 10px;
 }
+
+.sub-hero {
+    padding: 20px 40px;
+}
+
 .desc {
     font-size: 30px;
     line-height: 150%;
@@ -1438,6 +1443,10 @@ a.close-chat {
     .blog-text {
         font-size: 2.2rem;
     }
+    .sub-hero {
+        padding: 0;
+    }
+
     .desc {
         font-size: 2.2rem;
         padding-top: 20px !important;
