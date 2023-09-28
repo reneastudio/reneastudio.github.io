@@ -266,8 +266,8 @@ h6 {
 .desc {
     font-size: 30px;
     line-height: 150%;
-    padding-top: 100px !important;
-    padding-bottom: 180px !important;
+    padding-top: 0 !important;
+    padding-bottom: 120px !important;
     display: flex;
     align-items: center;
 }
