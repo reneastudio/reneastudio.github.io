@@ -1159,7 +1159,7 @@ a.close-chat {
     .menubar-container.active {
         margin-top: 0;
         padding-top: 20px;
-        padding-bottom: 20px;
+        padding-bottom: 10px;
         background: #fff;
     }
 
@@ -1182,7 +1182,7 @@ a.close-chat {
     }
 
     .header .navbar {
-        top: -54px;
+        top: -56px;
         position: relative;
     }
 
@@ -1320,6 +1320,9 @@ a.close-chat {
     }
     .mask-hero, .image-hero {
         padding: 0;
+    }
+    .hero .cta-button {
+        margin-left: 20px;
     }
 
     /**
@@ -1459,13 +1462,11 @@ a.close-chat {
     * FOOTER 
     **/
     .footer {
-        background: url(images/papan.jpg) center center no-repeat #222;
-        color: #f1f1f1;
-        padding-top: 110px;
+        padding-top: 100px;
     }
 
     .cta-footer {
-        text-align: center;
+        text-align: left;
     }
 
     .footer h1 {
@@ -1486,15 +1487,21 @@ a.close-chat {
     }
 
     .about {
-        padding-top: 60px
+        padding-top: 0;
     }
 
     .profil {
         width: 90px;
     }
 
-    .instagram,
+    .sosmed,
     .copyright {
-        text-align: left;
+        text-align: center;
+        background: #cdf44f;
+    }
+
+    .sosmed {
+        padding-top: 20px;
+        padding-bottom: 80px;
     }
 }
