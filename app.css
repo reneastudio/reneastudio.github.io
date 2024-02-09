@@ -157,6 +157,7 @@ h6 {
     top: 0;
     left: 0;
     padding: 0 10px;
+    pointer-events: none;
 }
 
 .image-hero {
@@ -290,6 +291,7 @@ video {
     top: 0;
     left: 0;
     padding: 0 10px;
+    pointer-events: none;
 }
 .video-reel {
     position: absolute;
