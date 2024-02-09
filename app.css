@@ -199,6 +199,7 @@ h6 {
     font-weight: 600;
     display: inline-block;
     margin-top: 30px;
+    margin-left: 20px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 22px 70px 4px;
     transition: transform .25s, visibility .25s ease-in;
     transform: scale(1.1);
@@ -681,6 +682,7 @@ video {
     font-weight: 600;
     display: inline-block;
     margin-top: 50px;
+    margin-left: 20px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 22px 70px 4px;
     transition: transform .25s, visibility .25s ease-in;
     transform: scale(1.1);
@@ -1484,6 +1486,7 @@ a.close-chat {
 
     .footer .cta-button {
         transform: scale(1.0);
+        margin-left: 0;
     }
 
     .footer .cta-button:hover {
