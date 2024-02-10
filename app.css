@@ -359,7 +359,7 @@ video {
 }
 
 .kancil {
-    background: url(images/kancil.png) center center no-repeat;
+    background: url(images/kancil.webp) center center no-repeat;
     background-size: cover;
     height: 670px;
     border-radius: 16px !important;
@@ -369,7 +369,7 @@ video {
 }
 
 .skv {
-    background: url(images/skv.png) center center no-repeat;
+    background: url(images/skv.webp) center center no-repeat;
     background-size: cover;
     height: 325px;
     border-radius: 16px !important;
@@ -380,7 +380,7 @@ video {
 }
 
 .radex {
-    background: url(images/focus-point.png) top center no-repeat;
+    background: url(images/focus-point.webp) top center no-repeat;
     background-size: cover;
     height: 325px;
     border-radius: 16px !important;
@@ -800,7 +800,6 @@ iframe.skiptranslate {
  * BLOG
  **/
 .blog-container {
-    background: url(images/background.jpg) center center no-repeat;
     background-size: cover;
     background-color: #fafafa;
 }
