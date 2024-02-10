@@ -1248,6 +1248,7 @@ a.close-chat {
         padding: 22px 20px;
         position: relative;
         user-select: none;
+        margin-right: 10px;
     }
 
     .header .menu-icon .navicon {
@@ -1319,13 +1320,27 @@ a.close-chat {
     }
     .hero-header h1 {
         font-size: 50px;
-        line-height: 1em;
+        line-height: 1.2em;
     }
     .mask-hero, .image-hero {
         padding: 0;
     }
     .hero .cta-button {
         margin-left: 20px;
+        color: #fff;
+        background: #222;
+    }
+    
+    .hero .cta-button:visited {
+        color: #fff !important;
+    }
+    
+    .hero .cta-button:hover {
+        box-shadow: rgba(0, 0, 0, 0.36) 0px 22px 70px 4px;
+        transform: scale(1.2);
+        transition: transform .25s, visibility .25s ease-in;
+        color: #CDFF07;
+        background: #222;
     }
 
     /**
@@ -1334,13 +1349,13 @@ a.close-chat {
     .cara-kerja-container,
     .blog-post-container {
         position: relative;
-        margin-top: 580px;
+        margin-top: 590px;
     }
 
     .cara-kerja h2,
     .blog-post h2 {
         font-size: 2.8rem;
-        line-height: 3.3rem;
+        line-height: 4.2rem;
         letter-spacing: 0;
     }
 
@@ -1359,6 +1374,10 @@ a.close-chat {
 
     .feat-port {
         margin-top: 220px;
+    }
+
+    .klien {
+        padding: 30px 0;
     }
 
     .klien h3 {
@@ -1458,7 +1477,8 @@ a.close-chat {
     }
 
     .marquee .text {
-        font-size: 4rem;
+        font-size: 6rem;
+        letter-spacing: -1px;
     }
 
     .curve-end {
