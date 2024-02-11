@@ -194,7 +194,7 @@ h6 {
     font-weight: 400;
     line-height: 150%;
     position: absolute;
-    top: 120px;
+    top: 140px;
     left: 100px;
     z-index: 11;
 }
@@ -1328,10 +1328,11 @@ a.close-chat {
         color: #222;
         left: 0;
         top: 240px;
+        position: inherit;
     }
 
     .hero-header h1 {
-        font-size: 40px;
+        font-size: 36px;
         line-height: 1.2em;
     }
 
@@ -1364,8 +1365,12 @@ a.close-chat {
     **/
     .cara-kerja-container,
     .blog-post-container {
-        position: relative;
-        margin-top: 660px;
+        position: inherit;
+        margin-top: 340px;
+    }
+
+    .cara-kerja {
+        padding-top: 0;
     }
 
     .cara-kerja h2,
