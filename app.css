@@ -1,3 +1,9 @@
+:root {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smooth: never;
+}
+
 html.lenis {
     height: auto;
 }
