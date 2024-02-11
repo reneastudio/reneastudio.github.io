@@ -89,6 +89,7 @@ h6 {
     z-index: 99999;
     width: 100%;
 }
+
 .menubar-container {
     top: 0;
     z-index: 9999;
@@ -254,8 +255,8 @@ h6 {
     padding-left: 90px;
 }
 
-.sub-heading:before{
-    content:" ";
+.sub-heading:before {
+    content: " ";
     height: 2px;
     width: 70px;
     background: #222;
@@ -279,9 +280,9 @@ h6 {
 }
 
 video {
-    width: 100%    !important;
-    height: auto   !important;
-  }
+    width: 100% !important;
+    height: auto !important;
+}
 
 .mask-video {
     position: absolute;
@@ -293,6 +294,7 @@ video {
     padding: 0 10px;
     pointer-events: none;
 }
+
 .video-reel {
     position: absolute;
     width: 100%;
@@ -788,6 +790,7 @@ video {
     border-radius: 6px;
     box-shadow: 0 1px 15px rgba(32, 33, 36, .28);
 }
+
 .goog-te-gadget-simple {
     border: none !important;
 }
@@ -1099,22 +1102,26 @@ a.close-chat {
     .container {
         max-width: 1480px;
     }
-    
+
 }
 
 @media (min-width:769px) and (max-width: 1366px) {
     .container {
         max-width: 1340px;
     }
+
     .cara-kerja-container {
         margin-top: 770px;
     }
+
     .feat-port {
         margin-top: 740px;
     }
+
     .hero-text {
         top: 120px;
     }
+
     .copyright {
         padding-bottom: 140px;
     }
@@ -1175,7 +1182,7 @@ a.close-chat {
         padding: 0;
     }
 
-    .menubar > .logo {
+    .menubar>.logo {
         padding-left: 30px;
     }
 
@@ -1318,23 +1325,27 @@ a.close-chat {
         left: 0;
         top: 240px;
     }
+
     .hero-header h1 {
         font-size: 50px;
         line-height: 1.2em;
     }
-    .mask-hero, .image-hero {
+
+    .mask-hero,
+    .image-hero {
         padding: 0;
     }
+
     .hero .cta-button {
         margin-left: 20px;
         color: #fff;
         background: #222;
     }
-    
+
     .hero .cta-button:visited {
         color: #fff !important;
     }
-    
+
     .hero .cta-button:hover {
         box-shadow: rgba(0, 0, 0, 0.36) 0px 22px 70px 4px;
         transform: scale(1.2);
@@ -1368,7 +1379,8 @@ a.close-chat {
         margin-top: 10px;
     }
 
-    .mask-video, .video-reel {
+    .mask-video,
+    .video-reel {
         padding: 0;
     }
 
@@ -1461,6 +1473,7 @@ a.close-chat {
     .marquee .text {
         letter-spacing: -1px;
     }
+
     .marquee .text>.outline {
         -webkit-text-stroke: 1px #222;
     }
