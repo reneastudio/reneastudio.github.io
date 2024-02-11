@@ -181,7 +181,7 @@ h6 {
     font-size: 88px;
     font-style: normal;
     font-weight: 700;
-    line-height: 88px;
+    line-height: 100px;
     letter-spacing: -1.48px;
     position: relative;
 }
@@ -191,10 +191,10 @@ h6 {
     font-family: "Work Sans";
     font-size: 22px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 150%;
     position: absolute;
-    top: 140px;
+    top: 120px;
     left: 100px;
     z-index: 11;
 }
@@ -203,7 +203,7 @@ h6 {
     border-radius: 999px;
     background: #fff;
     color: #222;
-    padding: 30px 15px 30px 48px;
+    padding: 30px 14px 30px 48px;
     font-weight: 600;
     display: inline-block;
     margin-top: 30px;
@@ -220,7 +220,7 @@ h6 {
     font-size: 22px;
     border-radius: 999px;
     font-weight: 700;
-    margin-left: 68px;
+    margin-left: 70px;
 }
 
 .hero .cta-button:visited {
@@ -688,7 +688,7 @@ video {
     border-radius: 999px;
     background: #fff;
     color: #222;
-    padding: 30px 15px 30px 48px;
+    padding: 30px 14px 30px 48px;
     font-weight: 600;
     display: inline-block;
     margin-top: 50px;
@@ -765,16 +765,14 @@ video {
 }
 
 .instagram {
-    color: #cdf44f !important;
-    background: #222;
+    color: #222;
     padding: 6px 8px;
     border-radius: 999px;
     font-size: 18px;
 }
 
 .dribbble {
-    color: #cdf44f !important;
-    background: #222;
+    color: #222;
     padding: 6px 6px;
     border-radius: 999px;
     font-size: 18px;
@@ -1333,7 +1331,7 @@ a.close-chat {
     }
 
     .hero-header h1 {
-        font-size: 50px;
+        font-size: 40px;
         line-height: 1.2em;
     }
 
@@ -1346,6 +1344,7 @@ a.close-chat {
         margin-left: 20px;
         color: #fff;
         background: #222;
+        margin-top: 10px;
     }
 
     .hero .cta-button:visited {
@@ -1366,7 +1365,7 @@ a.close-chat {
     .cara-kerja-container,
     .blog-post-container {
         position: relative;
-        margin-top: 590px;
+        margin-top: 660px;
     }
 
     .cara-kerja h2,
@@ -1516,8 +1515,9 @@ a.close-chat {
     }
 
     .footer h1 {
-        font-size: 3.625rem;
-        -webkit-text-stroke: 0 #fff;
+        font-size: 3.4rem;
+        line-height: 4.8rem;
+        letter-spacing: 0;
     }
 
     .footer-text {
@@ -1535,6 +1535,7 @@ a.close-chat {
 
     .about {
         padding-top: 0;
+        margin-top: 60px;
     }
 
     .profil {
