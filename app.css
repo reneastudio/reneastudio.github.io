@@ -1110,7 +1110,7 @@ a.close-chat {
     }
 
     .menubar-container {
-        max-width: 1520px !important;
+        max-width: 1520px;
     }
 
 }
