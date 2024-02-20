@@ -107,7 +107,6 @@ h6 {
     background: #fff;
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
-    max-width: 1520px !important;
 }
 
 .menubar-container.active {
@@ -1110,6 +1109,10 @@ a.close-chat {
         max-width: 1560px;
     }
 
+    .menubar-container {
+        max-width: 1520px !important;
+    }
+
 }
 
 @media (min-width:769px) and (max-width: 1366px) {
@@ -1171,7 +1174,6 @@ a.close-chat {
         margin-top: 0;
         padding-left: 0;
         padding-right: 0;
-        max-width: inherit;
     }
 
     .menubar-container.active {
