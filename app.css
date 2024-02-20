@@ -1119,6 +1119,9 @@ a.close-chat {
     .container {
         max-width: 1340px;
     }
+    .menubar-container {
+        max-width: inherit;
+    }
 
     .cara-kerja-container {
         margin-top: 770px;
@@ -1174,6 +1177,7 @@ a.close-chat {
         margin-top: 0;
         padding-left: 0;
         padding-right: 0;
+        max-width: inherit;
     }
 
     .menubar-container.active {
