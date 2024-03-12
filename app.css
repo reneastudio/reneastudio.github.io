@@ -470,14 +470,16 @@ ul.list li:first-child {
     margin-top: 0px;
     bottom: auto;
     width: 100%;
-    left: 10px;
-    display: contents;
+    left: 0;
+    display: inline;
+    top: 30px;
 }
 
 .about-page h2.desc {
     font-size: 20px;
     width: 100%;
     position: inherit;
+    margin-top: 30px;
 }
 
 .about-container h1 {
@@ -812,14 +814,16 @@ p.sub-heading {
     margin-top: 0px;
     bottom: auto;
     width: 100%;
-    left: 10px;
-    display: contents;
+    left: 0;
+    display: inline;
+    top: 30px;
 }
 
 .contact-page h2.desc {
     font-size: 20px;
     width: 100%;
     position: inherit;
+    margin-top: 30px;
 }
 
 
@@ -955,8 +959,6 @@ img.renea-studio-footer {
         margin-top: 0px;
         bottom: auto;
         width: 100%;
-        left: 0;
-        display: contents;
     }
 
     h2.desc {
@@ -1067,7 +1069,7 @@ img.renea-studio-footer {
 
     h1.site-title {
         font-size: 160px;
-        display: contents;
+        display: inline;
     }
 
     .svg-satu {
