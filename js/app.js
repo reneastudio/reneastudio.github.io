@@ -1,160 +1,122 @@
 $(document).ready(function () {
+  // TICKER
+  jQuery(function ($) {
+    $(".tickerwrapper, .tickerwrapper-dua").each(function (ix, ex) {
+      var $tickerWrapper = $(ex);
+      var $list = $tickerWrapper.find("ul.list");
+      var $clonedList = $list.clone();
+      var listWidth = 30;
+
+      $list.find("li").each(function (i) {
+        listWidth += $(this, i).outerWidth(true);
+      });
+
+      var endPos = $tickerWrapper.width() - listWidth;
+
+      $list.add($clonedList).css({
+        "width": listWidth + "px"
+      });
+
+      $clonedList.addClass("cloned").appendTo($tickerWrapper);
+
+      //TimelineMax
+      var infinite = new TimelineMax({ repeat: -1, paused: true });
+      var time = 60;
+
+      infinite
+        .fromTo($list, time, { rotation: 0.01, x: 0 }, { force3D: true, x: -listWidth, ease: Linear.easeNone }, 0)
+        .fromTo($clonedList, time, { rotation: 0.01, x: listWidth }, { force3D: true, x: 0, ease: Linear.easeNone }, 0)
+        .set($list, { force3D: true, rotation: 0.01, x: listWidth })
+        .to($clonedList, time, { force3D: true, rotation: 0.01, x: -listWidth, ease: Linear.easeNone }, time)
+        .to($list, time, { force3D: true, rotation: 0.01, x: 0, ease: Linear.easeNone }, time)
+        .progress(1).progress(0)
+        .play();
+    });
+  });
+
+  // JAM
   function showTime() {
-    var options = {
-      timeZone: 'Asia/Jakarta',
-      hour12: false, // 24-hour format
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit'
-    };
-    
-    var jakartaTime = new Date().toLocaleString('en-US', options);
-    
-    document.getElementById("jam").innerText = jakartaTime;
-    document.getElementById("jam").textContent = jakartaTime;
+    var date = new Date();
+    var h = date.getHours(); // 0 - 23
+    var m = date.getMinutes(); // 0 - 59
+    var s = date.getSeconds(); // 0 - 59
+    var session = "AM";
+
+    if (h == 0) {
+      h = 12;
+    }
+
+    if (h > 12) {
+      h = h - 12;
+      session = "PM";
+    }
+
+    h = h < 10 ? "0" + h : h;
+    m = m < 10 ? "0" + m : m;
+    s = s < 10 ? "0" + s : s;
+
+    var time = h + ":" + m  + " " + session;
+    document.getElementById("jam").innerText = time;
+    document.getElementById("jam").textContent = time;
 
     setTimeout(showTime, 1000);
   }
   showTime();
 
+  // OWL Carousel
+  var owl = $(".owl-carousel");
+  owl.owlCarousel({
+    items: 1,
+    autoplay: true,
+    loop: true,
+    nav: false,
+    autoplaySpeed: '3000',
+    autoplayTimeout: '7000'
+  });
 
-      // OWL Carousel
-      var owl = $(".owl-carousel");
-      owl.owlCarousel({
-        items: 1,
-        autoplay: true,
-        loop: true,
-        nav: false,
-      });
+  // UBAH WARNA BACKGROUND KETIKA SCROLL
+  $(window).scroll(function () {
+    // selectors
+    var $window = $(window),
+      $body = $('body'),
+      $panel = $('.panel');
 
-      $(window).on("scroll", function () {
-        if ($(window).scrollTop() > 50) {
-          $(".menubar-container").addClass("active");
-        } else {
-          $(".menubar-container").removeClass("active");
-        }
-      });
-    });
+    var scroll = $window.scrollTop() + ($window.height() / 3);
 
-    // GOOGLE TRANSLATE BAR HIDE
-    if(document.getElementsByClassName('.skiptranslate')[0] !== undefined) {
-      document.getElementsByClassName('.skiptranslate')[0].style.display  = 'none';
-      document.body.style.top = '0px';
-    }
+    $panel.each(function () {
+      var $this = $(this);
 
-    // FAQs ACCORDION
-    (function Accordion() {
-      const triggers = document.querySelectorAll('[data-toggle="collapse"]');
-      let activeToggle;
+      if ($this.position().top <= scroll && $this.position().top + $this.height() > scroll) {
 
-      triggers &&
-        triggers.forEach((trigger) => {
-          trigger.collapseTarget = document.querySelector(
-            trigger.hash || trigger.dataset.target
-          );
-
-          trigger.collapseTarget.dataset.parent &&
-            trigger.collapseTarget.classList.contains("is-active") &&
-            (activeToggle = trigger);
-
-          trigger.addEventListener("click", (event) => {
-            event.preventDefault();
-            event.stopPropagation();
-            toggle(trigger);
-          });
-
-          // Remove height when end open transition
-          trigger.collapseTarget.addEventListener(
-            "transitionend",
-            ({
-              target
-            }) => {
-              if (!target.classList.contains("is-active")) return;
-
-              target.style.height = null;
-            }
-          );
+        // Remove all classes on body with color-
+        $body.removeClass(function (index, css) {
+          return (css.match(/(^|\s)color-\S+/g) || []).join(' ');
         });
 
-      function toggle(trigger) {
-        if (trigger.collapseTarget.classList.contains("is-active")) {
-          close(trigger);
-          activeToggle = null;
-        } else {
-          activeToggle &&
-            activeToggle.collapseTarget.dataset.parent &&
-            close(activeToggle);
-
-          trigger.collapseTarget.dataset.parent && (activeToggle = trigger);
-
-          open(trigger);
-        }
+        // Add class of currently active div
+        $body.addClass('color-' + $(this).data('color'));
       }
-
-      function close(trigger) {
-        setHeight(trigger.collapseTarget);
-
-        trigger.parentElement.classList.remove("is-active");
-        trigger.classList.remove("is-active");
-        trigger.collapseTarget.classList.remove("is-active");
-
-        setTimeout(() => {
-          trigger.collapseTarget.style.height = null;
-        }, 0);
-      }
-
-      function open(trigger) {
-        trigger.classList.add("is-active");
-        trigger.parentElement.classList.add("is-active");
-
-        setTimeout(() => {
-          setHeight(trigger.collapseTarget);
-          trigger.collapseTarget.classList.add("is-active");
-        }, 0);
-      }
-
-      function setHeight(target) {
-        target.style.height = target.scrollHeight + "px";
-      }
-    })();
-
-    // LENIS SMOOTH SCROLL
-    const lenis = new Lenis({
-      duration: 1.75,
-      easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
-      orientation: "vertical",
-      gestureOrientation: "vertical",
-      smoothWheel: true,
-      smoothTouch: false,
-      touchMultiplier: 2,
     });
 
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
+  }).scroll();
+});
 
+
+
+  // LENIS SMOOTH SCROLL
+  const lenis = new Lenis({
+    duration: 1.5,
+    easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
+    orientation: "vertical",
+    gestureOrientation: "vertical",
+    smoothWheel: true,
+    smoothTouch: false,
+    touchMultiplier: 2,
+  });
+
+  function raf(time) {
+    lenis.raf(time);
     requestAnimationFrame(raf);
+  }
 
-    
-    // WHATSAPP CHAT
-    /* Whatsapp Chat Widget by www.idblanter.com */
-    $(document).on("click", "#send-it", function () {
-      var a = document.getElementById("chat-input");
-      if ("" != a.value) {
-          var b = $("#get-number").text(),
-              c = document.getElementById("chat-input").value,
-              d = "https://web.whatsapp.com/send",
-              e = b,
-              f = "&text=" + c;
-          if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) var d = "whatsapp://send";
-          var g = d + "?phone=" + e + f;
-          window.open(g, '_blank')
-      }
-    }), $(document).on("click", ".informasi", function () {
-      document.getElementById("get-number").innerHTML = $(this).children(".my-number").text(), $(".start-chat,.get-new").addClass("show").removeClass("hide"), $(".home-chat,.head-home").addClass("hide").removeClass("show"), document.getElementById("get-nama").innerHTML = $(this).children(".info-chat").children(".chat-nama").text(), document.getElementById("get-label").innerHTML = $(this).children(".info-chat").children(".chat-label").text()
-    }), $(document).on("click", ".close-chat", function () {
-      $("#whatsapp-chat").addClass("hide").removeClass("show")
-    }), $(document).on("click", ".konsultasi, .blantershow-chat", function () {
-      $("#whatsapp-chat").addClass("show").removeClass("hide")
-    });
+  requestAnimationFrame(raf);
