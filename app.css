@@ -801,7 +801,7 @@ p.sub-heading {
     text-transform: uppercase;
 }
 .footer h4 {
-    font-size: 26px;
+    font-size: 24px;
 }
 .daftar-kontak {
     padding-bottom: 140px;
@@ -847,7 +847,7 @@ img.renea-studio-footer {
 
 /***************************************
  ***************************************
- * TABLET
+ * MOBILE
  ***************************************
  ***************************************/
 @media (max-width: 1023px) {
@@ -871,6 +871,10 @@ img.renea-studio-footer {
     .column-offset-20,
     .column-offset-25 {
         margin-left: 0 !important;
+    }
+
+    .body {
+        width: 100vw;
     }
 
     .svg-satu {
@@ -935,7 +939,7 @@ img.renea-studio-footer {
         left: -15px;
     }
     .footer h2 {
-        font-size: 80px;
+        font-size: 70px;
     }
 
     .about-page .about {
@@ -955,7 +959,7 @@ img.renea-studio-footer {
     }
 
     .works h2 {
-        font-size: 80px;
+        font-size: 70px;
     }
     .review h2 {
         font-size: 70px;
