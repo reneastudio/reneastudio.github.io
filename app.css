@@ -950,6 +950,10 @@ img.renea-studio-footer {
         margin-top: 6rem;
     }
 
+    .works h3 {
+        font-size: 100px;
+    }
+
     .works h2 {
         font-size: 80px;
     }
@@ -978,7 +982,7 @@ img.renea-studio-footer {
         margin-top: 16px;
     }
     .email a {
-        font-size: 30px;
+        font-size: 28px;
     }
     .menu-footer {
         left: 0;
