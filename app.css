@@ -904,6 +904,8 @@ img.renea-studio-footer {
 
     .hero h1 {
         font-size: 70px;
+        position: inherit;
+        margin-top: 6rem;
     }
 
     .hero h2.hero-desc {
