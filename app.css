@@ -2,24 +2,25 @@
     box-sizing: border-box;
 }
 
-html.lenis, html.lenis body {
-  height: auto;
+html.lenis,
+html.lenis body {
+    height: auto;
 }
 
 .lenis.lenis-smooth {
-  scroll-behavior: auto !important;
+    scroll-behavior: auto !important;
 }
 
 .lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
+    overscroll-behavior: contain;
 }
 
 .lenis.lenis-stopped {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .lenis.lenis-scrolling iframe {
-  pointer-events: none;
+    pointer-events: none;
 }
 
 /* ===== Scrollbar CSS ===== */
@@ -58,6 +59,7 @@ body {
     background-color: #fff;
     color: #232527;
 }
+
 body.about-page {
     background: #fff;
 }
@@ -66,7 +68,9 @@ img {
     border-radius: 8px;
 }
 
-a, a:active, a:visited {
+a,
+a:active,
+a:visited {
     color: #232527;
 }
 
@@ -86,6 +90,7 @@ a, a:active, a:visited {
     background-color: #d73216;
     color: #f4f3e3;
 }
+
 .color-red .menuToggle span {
     background-color: #CDFF07;
 }
@@ -109,16 +114,19 @@ a, a:active, a:visited {
     z-index: 99;
     -webkit-user-select: none;
     user-select: none;
-  }
-  .menuToggle a {
+}
+
+.menuToggle a {
     text-decoration: none;
     color: #232323;
     transition: all 0.3s ease;
-  }
-  .menuToggle a:hover {
+}
+
+.menuToggle a:hover {
     color: tomato;
-  }
-  .menuToggle input {
+}
+
+.menuToggle input {
     display: block;
     width: 40px;
     height: 32px;
@@ -130,8 +138,9 @@ a, a:active, a:visited {
     z-index: 999;
     /* and place it over the hamburger */
     -webkit-touch-callout: none;
-  }
-  .menuToggle span {
+}
+
+.menuToggle span {
     position: relative;
     display: block;
     width: 36px;
@@ -142,31 +151,36 @@ a, a:active, a:visited {
     z-index: 99;
     transform-origin: 4px 0px;
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
-  }
-  .menuToggle span:first-child {
+}
+
+.menuToggle span:first-child {
     transform-origin: 0% 0%;
-  }
-  .menuToggle span:nth-last-child(2) {
+}
+
+.menuToggle span:nth-last-child(2) {
     transform-origin: 0% 100%;
-  }
-  
-  .menuToggle input:checked ~ span {
+}
+
+.menuToggle input:checked~span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
     background: #232323;
-  }
-  .menuToggle input:checked ~ span:nth-last-child(3) {
+}
+
+.menuToggle input:checked~span:nth-last-child(3) {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
-  }
-  .menuToggle input:checked ~ span:nth-last-child(2) {
+}
+
+.menuToggle input:checked~span:nth-last-child(2) {
     transform: rotate(-45deg) translate(0, -1px);
-  }
-  .menuToggle input:checked ~ .menuItem {
+}
+
+.menuToggle input:checked~.menuItem {
     transform: none;
-  }
-  
-  .menuItem {
+}
+
+.menuItem {
     position: absolute;
     width: 300px;
     padding: 50px;
@@ -180,58 +194,68 @@ a, a:active, a:visited {
     -webkit-box-shadow: 17px 20px 20px 25px rgba(32, 41, 88, 0.18);
     -moz-box-shadow: 17px 20px 20px 25px rgba(32, 41, 88, 0.18);
     box-shadow: 17px 20px 20px 25px rgba(32, 41, 88, 0.18);
-  }
-  .menuItem li {
+}
+
+.menuItem li {
     padding: 10px 0;
     font-size: 22px;
-  }
+}
 
-  .menu--bottom--left .menuToggle {
+.menu--bottom--left .menuToggle {
     position: fixed;
     bottom: auto;
     top: 0;
     right: 0;
     z-index: 99;
-  }
-  .menu--bottom--left .menuToggle input {
+}
+
+.menu--bottom--left .menuToggle input {
     right: 50px;
     top: 50px;
     bottom: auto;
-  }
-  .menu--bottom--left .menuToggle input:checked ~ .menuItem {
+}
+
+.menu--bottom--left .menuToggle input:checked~.menuItem {
     transform: scale(1);
-  }
-  .menu--bottom--left .menuToggle input:checked ~ .menuItem li:nth-child(1) {
+}
+
+.menu--bottom--left .menuToggle input:checked~.menuItem li:nth-child(1) {
     -webkit-animation: text-slide-in 0.2s;
     -moz-animation: text-slide-in 0.2s;
     animation: text-slide-in 0.2s;
-  }
-  .menu--bottom--left .menuToggle input:checked ~ .menuItem li:nth-child(2) {
+}
+
+.menu--bottom--left .menuToggle input:checked~.menuItem li:nth-child(2) {
     -webkit-animation: text-slide-in 0.3s;
     -moz-animation: text-slide-in 0.3s;
     animation: text-slide-in 0.3s;
-  }
-  .menu--bottom--left .menuToggle input:checked ~ .menuItem li:nth-child(3) {
+}
+
+.menu--bottom--left .menuToggle input:checked~.menuItem li:nth-child(3) {
     -webkit-animation: text-slide-in 0.4s;
     -moz-animation: text-slide-in 0.4s;
     animation: text-slide-in 0.4s;
-  }
-  .menu--bottom--left .menuToggle input:checked ~ .menuItem li:nth-child(4) {
+}
+
+.menu--bottom--left .menuToggle input:checked~.menuItem li:nth-child(4) {
     -webkit-animation: text-slide-in 0.5s;
     -moz-animation: text-slide-in 0.5s;
     animation: text-slide-in 0.5s;
-  }
-  .menu--bottom--left .menuToggle input:checked ~ .menuItem li:nth-child(5) {
+}
+
+.menu--bottom--left .menuToggle input:checked~.menuItem li:nth-child(5) {
     -webkit-animation: text-slide-in 0.6s;
     -moz-animation: text-slide-in 0.6s;
     animation: text-slide-in 0.6s;
-  }
-  .menu--bottom--left .menuToggle span {
+}
+
+.menu--bottom--left .menuToggle span {
     right: 50px;
     top: 50px;
     bottom: auto;
-  }
-  .menu--bottom--left .menuItem {
+}
+
+.menu--bottom--left .menuItem {
     top: 0;
     right: 0;
     margin: 0;
@@ -242,40 +266,45 @@ a, a:active, a:visited {
     -webkit-transition: -webkit-transform 0.3s, visibility 0s 0s;
     -moz-transition: -moz-transform 0.3s, visibility 0s 0s;
     transition: transform 0.3s, visibility 0s 0s;
-  }
-  .menu--bottom--left .menuItem li {
+}
+
+.menu--bottom--left .menuItem li {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-  }
-  .menu--bottom--left .menuItem li a:hover {
+}
+
+.menu--bottom--left .menuItem li a:hover {
     padding-left: 5px;
-  }
-  
-  @keyframes text-slide-in {
+}
+
+@keyframes text-slide-in {
     0% {
-      -webkit-transform: translateX(100px);
-      -moz-transform: translateX(100px);
-      -ms-transform: translateX(100px);
-      -o-transform: translateX(100px);
-      transform: translateX(100px);
+        -webkit-transform: translateX(100px);
+        -moz-transform: translateX(100px);
+        -ms-transform: translateX(100px);
+        -o-transform: translateX(100px);
+        transform: translateX(100px);
     }
+
     100% {
-      -webkit-transform: translateY(0);
-      -moz-transform: translateY(0);
-      -ms-transform: translateY(0);
-      -o-transform: translateY(0);
-      transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
     }
-  }
-  .fa-brands {
+}
+
+.icon {
     width: 25px;
-  }
+}
 
 
 /** HERO **/
 .hero {
     min-height: 100vh;
 }
+
 .about-page .hero {
     min-height: inherit;
 }
@@ -397,9 +426,11 @@ ul.list li:first-child {
     text-align: center;
     margin-top: 18rem;
 }
+
 .about-page .hero {
     min-height: inherit;
 }
+
 .about-page .about {
     margin-top: 8rem;
 }
@@ -419,6 +450,7 @@ ul.list li:first-child {
     margin-top: 2rem;
     margin-bottom: 16rem;
 }
+
 .about-page h4 {
     margin-bottom: 8rem;
 }
@@ -484,6 +516,7 @@ ul.list li:first-child {
     background-position: top center;
     background-color: #232527;
 }
+
 .works-container {
     padding-top: 16rem;
     padding-bottom: 1rem;
@@ -767,6 +800,7 @@ p.sub-heading {
 .contact-page .hero {
     min-height: inherit;
 }
+
 .contact-page h1.site-title {
     font-size: 100px;
     position: relative;
@@ -790,6 +824,7 @@ p.sub-heading {
 .footer {
     padding-bottom: 24rem;
 }
+
 .footer h2 {
     font-family: "SCHABO Condensed";
     font-weight: normal;
@@ -800,43 +835,53 @@ p.sub-heading {
     padding-top: 16px;
     text-transform: uppercase;
 }
+
 .footer h4 {
     font-size: 24px;
 }
+
 .daftar-kontak {
     padding-bottom: 140px;
 }
+
 span.time {
     float: left;
     margin-left: 4px;
     text-transform: uppercase;
 }
+
 a#backtotop {
     float: right;
     margin-right: 10px;
     text-transform: uppercase;
 }
+
 .email {
     margin-top: 30px;
 }
+
 .email a {
     font-size: 48px;
     font-weight: 700;
     color: #232527;
     text-decoration: underline;
 }
+
 img.renea-studio-footer {
     line-height: 0;
     left: 0;
     border-radius: 0;
 }
+
 .menu-footer {
     position: absolute;
     bottom: 0;
     height: 234px;
     background: url(images/renea-studio.webp) bottom center no-repeat;
 }
-.jam, .backtop {
+
+.jam,
+.backtop {
     position: relative;
     bottom: 60px;
 }
@@ -851,6 +896,7 @@ img.renea-studio-footer {
  ***************************************
  ***************************************/
 @media (max-width: 1023px) {
+
     /**
     * RESET MILIGRAM 
     **/
@@ -878,15 +924,15 @@ img.renea-studio-footer {
     }
 
     .svg-satu {
-        left: -1132px 
+        left: -1132px
     }
-    
+
     .svg-dua {
         position: absolute;
         top: -660px;
         right: -1169px;
     }
-    
+
     .svg-tiga {
         position: absolute;
         bottom: -60px;
@@ -894,13 +940,15 @@ img.renea-studio-footer {
     }
 
     .menu--bottom--left .menuToggle {
-      top: 0;
-      right: 0;
+        top: 0;
+        right: 0;
     }
+
     .menu--bottom--left .menuToggle input {
         right: 30px;
         top: 30px;
     }
+
     .menu--bottom--left .menuToggle span {
         right: 30px;
         top: 30px;
@@ -918,14 +966,15 @@ img.renea-studio-footer {
         position: inherit;
     }
 
-    h1.site-title, .about-page h1.site-title {
+    h1.site-title,
+    .about-page h1.site-title {
         font-size: 100px;
         position: relative;
         margin-top: 0px;
         bottom: auto;
         width: 100%;
         left: 0;
-        top: 30px; 
+        top: 30px;
     }
 
     h2.desc {
@@ -934,10 +983,12 @@ img.renea-studio-footer {
         position: inherit;
         margin-top: 30px;
     }
-    
-    .tickerwrapper, .tickerwrapper-dua {
+
+    .tickerwrapper,
+    .tickerwrapper-dua {
         left: -15px;
     }
+
     .footer h2 {
         font-size: 70px;
     }
@@ -946,7 +997,8 @@ img.renea-studio-footer {
         margin-top: 6rem;
     }
 
-    .about-container h1, .about h2 {
+    .about-container h1,
+    .about h2 {
         font-size: 70px;
     }
 
@@ -961,6 +1013,7 @@ img.renea-studio-footer {
     .works h2 {
         font-size: 70px;
     }
+
     .review h2 {
         font-size: 70px;
     }
@@ -973,7 +1026,8 @@ img.renea-studio-footer {
         margin-bottom: 8px;
     }
 
-    .project .project-desc, .project .kancil .project-desc {
+    .project .project-desc,
+    .project .kancil .project-desc {
         width: 100%;
         right: 0;
         border-radius: 8px;
@@ -982,19 +1036,25 @@ img.renea-studio-footer {
         margin-bottom: 20px;
         box-shadow: none;
     }
+
     .kontak {
         margin-top: 16px;
     }
+
     .email a {
         font-size: 28px;
     }
+
     .menu-footer {
         left: 0;
     }
-    .jam, .backtop {
+
+    .jam,
+    .backtop {
         width: 50%;
         padding: 0 20px;
     }
+
     .deskripsi {
         bottom: 10px;
         width: calc(100% - 20px);
@@ -1018,9 +1078,10 @@ img.renea-studio-footer {
  ***************************************/
 @media (min-width: 1024px) and (max-width: 1366px) {
     .menu--bottom--left .menuToggle {
-      top: 0;
-      right: 90px;
+        top: 0;
+        right: 90px;
     }
+
     .container {
         max-width: 1300px !important;
     }
@@ -1061,6 +1122,7 @@ img.renea-studio-footer {
         bottom: -160px;
         right: 100px;
     }
+
     .footer h2 {
         font-size: 110px;
     }
