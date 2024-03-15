@@ -70,7 +70,8 @@ img {
 
 a,
 a:active,
-a:visited {
+a:visited,
+a:hover {
     color: #232527;
 }
 
