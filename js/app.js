@@ -103,7 +103,7 @@ $(document).ready(function () {
   // OPACITY CHANGE
   setTimeout(function() {
       $('.content-container').animate({opacity: 1}, 1000);
-  }, 2000);
+  }, 1000);
 });
 
 
