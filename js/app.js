@@ -99,6 +99,11 @@ $(document).ready(function () {
     });
 
   }).scroll();
+
+  // OPACITY CHANGE
+  setTimeout(function() {
+      $('.content-container').animate({opacity: 1}, 1000);
+  }, 2000);
 });
 
 

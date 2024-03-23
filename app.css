@@ -64,6 +64,10 @@ body.about-page {
     background: #fff;
 }
 
+.content-container {
+    opacity: 0;
+}
+
 img {
     border-radius: 8px;
 }
