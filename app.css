@@ -254,6 +254,18 @@ a:hover {
     animation: text-slide-in 0.6s;
 }
 
+.menu--bottom--left .menuToggle input:checked~.menuItem li:nth-child(6) {
+    -webkit-animation: text-slide-in 0.7s;
+    -moz-animation: text-slide-in 0.7s;
+    animation: text-slide-in 0.7s;
+}
+
+.menu--bottom--left .menuToggle input:checked~.menuItem li:nth-child(7) {
+    -webkit-animation: text-slide-in 0.8s;
+    -moz-animation: text-slide-in 0.8s;
+    animation: text-slide-in 0.8s;
+}
+
 .menu--bottom--left .menuToggle span {
     right: 50px;
     top: 50px;
@@ -317,11 +329,11 @@ a:hover {
 .hero h1 {
     font-family: "SCHABO Condensed";
     font-weight: normal;
-    font-size: 120px;
+    font-size: 116px;
     font-style: normal;
     line-height: .9em;
     margin: 0;
-    bottom: 48px;
+    bottom: 40px;
     text-transform: uppercase;
     position: absolute;
 }
