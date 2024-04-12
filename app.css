@@ -1096,7 +1096,7 @@ img.renea-studio-footer {
 @media (min-width: 1024px) and (max-width: 1366px) {
     .menu--bottom--left .menuToggle {
         top: 0;
-        right: 90px;
+        right: 0;
     }
 
     .container {
