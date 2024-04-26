@@ -972,9 +972,11 @@ img.renea-studio-footer {
     }
 
     .hero h1 {
-        font-size: 70px;
+        font-size: 60px;
         position: inherit;
         margin-top: 6rem;
+        letter-spacing: 0;
+        line-height: 1em;
     }
 
     .hero h2.hero-desc {
@@ -1001,9 +1003,17 @@ img.renea-studio-footer {
         margin-top: 30px;
     }
 
+    .about h4 {
+        font-size: 20px;
+        margin-top: 2rem;
+        margin-bottom: 16rem;
+        letter-spacing: 0;
+    }
+
     .tickerwrapper,
     .tickerwrapper-dua {
-        left: -15px;
+        display: none;
+        visibility: hidden;
     }
 
     .footer h2 {
@@ -1016,7 +1026,11 @@ img.renea-studio-footer {
 
     .about-container h1,
     .about h2 {
-        font-size: 70px;
+        font-size: 54px;
+        letter-spacing: 0;
+        line-height: 1em;
+        margin-bottom: 12px;
+    }
     }
 
     .project {
@@ -1028,15 +1042,24 @@ img.renea-studio-footer {
     }
 
     .works h2 {
-        font-size: 70px;
+        font-size: 60px;
+        position: inherit;
+        letter-spacing: 0;
+        line-height: 1em;
+        margin-bottom: 16px;
     }
 
     .review h2 {
-        font-size: 70px;
+        font-size: 56px;
+        position: inherit;
+        letter-spacing: 0;
+        line-height: 1em;
     }
 
     .review h3 {
-        font-size: 50px;
+        font-size: 42px;
+        letter-spacing: 0;
+        line-height: 1em;
     }
 
     .sub-heading {
@@ -1086,7 +1109,7 @@ img.renea-studio-footer {
         margin-top: 4px;
         text-align: left;
     }
-}
+
 
 /***************************************
  ***************************************
