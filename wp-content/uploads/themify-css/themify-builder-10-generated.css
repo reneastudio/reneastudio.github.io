@@ -1,0 +1,20 @@
+/* Generated from page: home */
+.themify_builder_content-10 .tb_71xw582{padding-bottom:62px}
+.themify_builder_content-10 .tb_q4xw165>.row_inner{--colg:var(--narrow)}
+.themify_builder_content-10 .tb_q4xw165{padding-bottom:100px}
+.themify_builder_content-10 .tb_o05n165{background-color:#ebebeb;border-radius:12px;padding:40px}
+.themify_builder_content-10 .tb_ag31332{background-color:#d8cadb;border-radius:12px;padding:40px}
+.themify_builder_content-10 .tb_kjrb333{border-radius:12px;background-color:#fff;padding:40px}
+.themify_builder_content-10 .tb_rjgw639{padding-bottom:340px;padding-top:100px;background-position:50.06% 100%;background-attachment:scroll;background-repeat:no-repeat;background-image:url(../2024/05/renea-studio.webp);background-color:#ddfc79}
+.themify_builder_content-10 .tb_cn4d639{padding-top:40px;--col:1.382fr .766fr .852fr}
+.themify_builder_content-10 .tb_mt8r639{padding-left:45px}
+
+@media(max-width:1024px){
+.themify_builder_content-10 .tb_cn4d639{--col:none}
+}
+@media(max-width:600px){
+.themify_builder_content-10 .tb_q4xw165>.row_inner{--col:none;--area:var(--aream3_auto)}
+.themify_builder_content-10 .tb_cn4d639{--area:var(--aream3_auto)}
+.themify_builder_content-10 .tb_hvib639{padding-bottom:40px}
+.themify_builder_content-10 .tb_mt8r639{padding-left:0;padding-bottom:40px}
+}
