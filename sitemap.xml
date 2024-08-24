@@ -3,17 +3,7 @@
 		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 	<loc>https://reneastudio.com/</loc>
-	<lastmod>2024-07-07T14:34:44+01:00</lastmod>
+	<lastmod>2024-08-24T14:34:44+01:00</lastmod>
 	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://reneastudio.com/id/index.html</loc>
-	<lastmod>2024-07-07T14:34:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://reneastudio.com/index.html</loc>
-	<lastmod>2024-07-07T14:34:46+01:00</lastmod>
-	<priority>0.4</priority>
 </url>
 </urlset>
