@@ -86,7 +86,6 @@ h3 {
     font-size: 22px;
     font-weight: 600;
     line-height: 24px;
-    /* 109.091% */
     -webkit-text-stroke: .5px #000;
     letter-spacing: .5px;
 }
@@ -166,6 +165,10 @@ h6 {
     padding: 8px 0 0 8px !important;
 }
 
+.logo img {
+    filter: invert(100%);
+}
+
 .menu {
     border-top-right-radius: 90px;
     border-bottom-right-radius: 90px;
@@ -210,7 +213,7 @@ h6 {
  * HERO
 **/
 .hero-container {
-    background: url(images/background-lurus.jpg) bottom center no-repeat;
+    background: url(images/hero-bg.webp) bottom center no-repeat;
     background-size: cover;
     background-color: #fafafa;
 }
@@ -244,14 +247,7 @@ h6 {
     letter-spacing: -1.48px;
     -webkit-text-stroke: 2px #000;
     position: relative;
-}
-
-.slanted {
-    background: #CDFF07;
-    padding: 14px 12px 8px;
-    border-radius: 8px;
-    transform: skew(-2deg, 0) rotate(-2deg);
-    display: inline-block;
+    margin-bottom: 0 !important;
 }
 
 .hero-text {
@@ -375,8 +371,9 @@ ul.brands-logo {
 }
 
 .urutan .nomor {
-    font-size: 4rem;
+    font-size: 2.6rem;
     font-weight: 700;
+    margin-bottom: 20px;
 }
 
 .cara-kerja .column:nth-of-type(2) {
@@ -398,7 +395,7 @@ ul.brands-logo {
 }
 
 .quote-content {
-    padding: 80px 60px 50px 340px;
+    padding: 80px 60px 50px 300px;
 }
 
 .quote h2 {
@@ -434,40 +431,12 @@ ul.brands-logo {
     transition: all 0.4s ease;
 }
 
-
-
 /**
- * KEUNGGULAN
-**/
-.keunggulan-container {
-    background: url(images/background.jpg) center top no-repeat #effdf3cb;
-    background-size: cover;
-    position: relative;
-    margin-top: 110px;
-    padding-top: 110px;
-    padding-bottom: 110px;
-    text-align: center;
-}
-
-.keunggulan h3 {
-    margin-top: 30px;
-}
-
-.daftar-keunggulan {
-    margin-bottom: 10px;
-}
-
-.daftar-keunggulan img {
-    height: 46px;
-    width: auto;
-}
-
-/** 
  * PORTFOLIO
 **/
 .portfolio {
     padding-top: 110px;
-    padding-bottom: 180px;
+    padding-bottom: 110px;
     position: relative;
 }
 
@@ -574,11 +543,67 @@ ul.brands-logo {
     text-align: right;
 }
 
-/** 
+
+/**
+ * KEUNGGULAN
+**/
+.keunggulan-container {
+    background: url(images/background.jpg) center top no-repeat #effdf3cb;
+    background-size: cover;
+    position: relative;
+    padding-top: 110px;
+    padding-bottom: 110px;
+    text-align: center;
+}
+
+.keunggulan h3 {
+    margin-top: 30px;
+}
+
+.daftar-keunggulan {
+    margin-bottom: 10px;
+}
+
+.daftar-keunggulan img {
+    height: 46px;
+    width: auto;
+}
+.layanan-container {
+    display: flex;
+      gap: 2.0rem; /* Adds 20px spacing between columns */
+}
+.layanan {
+    border: 1px solid #666666;
+    border-radius: 12px;
+}
+.fitur-layanan {
+    padding: 20px 40px 40px;
+}
+span.harga {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+ul.fitur {
+    text-align: left;
+    font-size: 16px;
+}
+ul.fitur li {
+    list-style-position: outside;
+}
+.button-black {
+    border-color:#000;
+    color:#000 !important;
+    border-radius: 120px;
+}
+
+
+/**
  * FAQ
 **/
 .faq-container {
-    padding-top: 20px;
+    position: relative;
+    padding-top: 110px;
     padding-bottom: 10px;
 }
 
@@ -708,7 +733,7 @@ ul.brands-logo {
 
 
 /**
- * MARQUEE 
+ * MARQUEE
 **/
 .marquee {
     font-family: 'Mattone', sans-serif;
@@ -804,7 +829,7 @@ ul.brands-logo {
 }
 
 /**
- * FOOTER 
+ * FOOTER
 **/
 .footer {
     background: url(images/papan.jpg) center center no-repeat #000;
@@ -898,17 +923,13 @@ ul.brands-logo {
     font-size: 14px;
     margin-top: 110px;
     padding-bottom: 40px;
-    text-align: right;
+    text-align: center;
 }
 
-.instagram {
-    position: relative;
-    text-align: left;
-}
-
-.ig-icon {
-    position: absolute;
-    top: -65px;
+.foto-profil {
+    width: 70px;
+    height: auto;
+    border-radius: 100%;
 }
 
 .copyright a {
@@ -1235,12 +1256,12 @@ a.close-chat {
 }
 
 /**
- * MOBILE VIEW 
+ * MOBILE VIEW
  **/
 @media (max-width: 768px) {
 
     /**
-    * RESET MILIGRAM 
+    * RESET MILIGRAM
     **/
     .column.column-20,
     .column.column-25,
@@ -1540,7 +1561,7 @@ a.close-chat {
         font-size: 1.6rem;
     }
 
-    /** 
+    /**
     * PORTFOLIO
     **/
     .portfolio h2 {
@@ -1595,7 +1616,7 @@ a.close-chat {
         text-align: left;
     }
 
-    /** 
+    /**
     * FAQ
     **/
     .faq-container h2 {
@@ -1615,7 +1636,7 @@ a.close-chat {
     }
 
     /**
-    * FOOTER 
+    * FOOTER
     **/
     .footer {
         background: url(images/papan.jpg) center center no-repeat #000;
@@ -1652,8 +1673,7 @@ a.close-chat {
         width: 90px;
     }
 
-    .instagram,
     .copyright {
-        text-align: left;
+        text-align: center;
     }
 }
